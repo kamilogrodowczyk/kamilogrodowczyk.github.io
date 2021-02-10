@@ -1,0 +1,38 @@
+.about {
+    width: 100%;
+}
+
+.about__container {
+    /* height: 48vh; */
+    height: 480px;
+    width: 100%;
+    display: flex;
+}
+
+.about__container > * {
+    height: 100%;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.about__text {
+    width: 600px;
+    margin-left: auto;
+    height: 100%;
+    padding: 0 75px;
+    background-color: var(--bg-color-white);
+    display: grid;
+    align-content: space-between;
+    justify-items: flex-start;
+    
+}
+
+.about__image--right {
+    width: 55%;
+    margin-left: auto;
+}
+.about__image--left {
+    width: 12.5%;
+}

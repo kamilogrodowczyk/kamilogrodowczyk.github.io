@@ -1,0 +1,92 @@
+@import url("header.css");
+@import url("video.css");
+@import url("collection.css");
+@import url("floor.css");
+@import url("about.css");
+@import url("info.css");
+@import url("trade.css");
+@import url("rubra.css");
+@import url("example.css");
+@import url("loaction.css");
+@import url("footer.css");
+
+:root {
+    --bg-color-black: #2d2d2d;
+    --bg-color-white: #fff;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+h4 {
+    font-size: 32px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.f-w300 {
+    font-weight: 300;
+}
+
+.f-w700 {
+    font-weight: 700;
+}
+
+svg {
+    width: 27px;
+    height: 27px;
+}
+
+.container {
+    width: 75vw;
+    margin: 0 auto;
+}
+
+.m-1 {
+    margin: 100px 0;
+}
+
+.m-2 {
+    margin: 150px 0;
+}
+
+.m-y1 {
+    margin-top: 100px;
+}
+
+.btn {
+    padding: 16px 40px;
+    background-color: var(--bg-color-black);
+    outline: none;
+    border: none;
+    display: inline-block;
+    border-radius: 25px;
+    color: var(--bg-color-white);
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: 'Maven Pro', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+}

@@ -1,0 +1,39 @@
+.floor {
+    width: 100%;
+}
+
+.floor__header {
+    text-align: center;
+}
+
+.floor__images {
+    height: 600px;
+    /* height: 60vh; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(1fr);
+}
+
+.floor__image {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    object-fit: fill;
+}
+
+.floor__button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+}
+
+.floor__button--white.btn {
+    background-color: var(--bg-color-white);
+    color: var(--bg-color-black);
+}

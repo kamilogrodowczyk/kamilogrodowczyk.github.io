@@ -1,0 +1,55 @@
+.rubra {
+    height: 600px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+.rubra__container {
+    display: flex;
+    position: relative;
+}
+
+.rubra__container::after {
+    content: '';
+    background: linear-gradient(to top left, rgba(34,34,34,1) 6%, rgba(255,255,255,0) 100%);
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.rubra__image--left,
+.rubra__image--right {
+    background-image: url('/assets/rubra-left.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 40%;
+    height: 100%;
+}
+
+.rubra__image--right {
+    background-image: url('/assets/rubra-right.jpg');
+    width: 60%;
+    position: relative;
+}
+
+.rubra__text {
+    position: absolute;
+    right: 6%;
+    bottom: 15%;
+    z-index: 3;
+    color: var(--bg-color-white);
+    text-align: right;
+}
+
+.rubra__text > p {
+    margin: 0;
+}
+
+.rubra__button {
+    justify-self: center;
+    align-self: flex-end;
+}

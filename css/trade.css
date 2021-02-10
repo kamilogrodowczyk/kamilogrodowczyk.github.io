@@ -1,0 +1,67 @@
+.trade {
+    height: 700px;
+    width: 100%;
+    position: relative;
+}
+
+.trade__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    height: 90%;
+    object-fit: cover;
+}
+
+.trade__image {
+    background-image: url('/assets/crop-people-shaking-hands-conference.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    width: 90%;
+    height: 100%;
+}
+
+.trade__text {
+    width: 90%;
+    display: grid;
+    align-content: space-between;
+}
+
+.trade__logo {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    z-index: -1;
+}
+
+.trade__contact--contact {
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.trade__contact--name {
+    margin-bottom: 25px; 
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.trade__contact--number,
+.trade__contact--mail {
+    position: relative;
+    margin-left: 40px;
+    font-size: 24px;
+}
+
+.trade__contact--number::before,
+.trade__contact--mail::before {
+    content: url('/assets/phone-ringing.svg');
+    position: absolute;
+    left: -40px;
+    top: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.trade__contact--mail::before {
+    content: url('/assets/mail.svg');
+}
