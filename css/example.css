@@ -56,7 +56,7 @@
 }
 
 .example__accent {
-    background-image: url('/assets/podłoga.jpg');
+    background-image: url('../assets/podłoga.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

@@ -13,7 +13,7 @@
 }
 
 .trade__image {
-    background-image: url('/assets/crop-people-shaking-hands-conference.jpg');
+    background-image: url('../assets/crop-people-shaking-hands-conference.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -54,7 +54,7 @@
 
 .trade__contact--number::before,
 .trade__contact--mail::before {
-    content: url('/assets/phone-ringing.svg');
+    content: url('../assets/phone-ringing.svg');
     position: absolute;
     left: -40px;
     top: 0;
@@ -63,5 +63,5 @@
 }
 
 .trade__contact--mail::before {
-    content: url('/assets/mail.svg');
+    content: url('../assets/mail.svg');
 }

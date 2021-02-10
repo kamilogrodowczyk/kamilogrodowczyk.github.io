@@ -86,7 +86,7 @@
 }
 
 .header__container {
-    background-image: url('/assets/slider.jpg');
+    background-image: url('../assets/slider.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -150,7 +150,7 @@
 }
 
 .header__arrow-text::after {
-    content: url('/assets/right-arrow.svg');
+    content: url('../assets/right-arrow.svg');
     display: inline-block;
     position: absolute;
     left: 125%;

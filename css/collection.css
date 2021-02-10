@@ -5,7 +5,7 @@
 }
 
 .collection__container {
-    background-image: url('/assets/obrazek.jpg');
+    background-image: url('../assets/obrazek.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
