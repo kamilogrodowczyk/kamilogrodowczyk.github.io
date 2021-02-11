@@ -26,24 +26,43 @@ body {
     font-family: 'Maven Pro', sans-serif;
 }
 
-h4 {
-    font-size: 32px;
-    line-height: 1.5;
+h1 {
+    font-size: 3.052rem;
+    line-height: 1.1;
+}
+h2 {
+    font-size: 2.441rem;
+    line-height: 1.2;
+}
+h3 {
+    font-size: 1.953rem;
+    line-height: 1.4;
     margin-bottom: 40px;
 }
+h4 {
+    font-size: 1.563rem;
+    line-height: 1.5;
+}
 
-li {
-    list-style: none;
+h5 {
+    font-size: 1.25rem;
+    line-height: 1.5;
 }
 
 a {
     text-decoration: none;
+    color: white;
+    font-size: 1.953rem;
 }
 
 p {
     margin-bottom: 10px;
     line-height: 1.5;
     font-weight: 500;
+}
+
+li {
+    list-style: none;
 }
 
 .f-w300 {
@@ -89,4 +108,19 @@ svg {
     font-family: 'Maven Pro', sans-serif;
     text-transform: uppercase;
     font-weight: 600;
+    box-shadow: 0;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out, box-shadow .1s .05s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--bg-color-white);
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+    color: var(--bg-color-black);
+    transition: background-color .3s ease-in-out, color .3s ease-in-out, box-shadow .2s .1s ease-in-out;
 }

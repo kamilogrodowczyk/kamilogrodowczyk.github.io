@@ -51,14 +51,19 @@
     flex: 2;
 }
 
-.footer__button {
-    background-image: linear-gradient(to left, #d7a950 0%, #f3eb89 100%);
+.footer__button.btn {
+    background-image: linear-gradient(#d7a950 0%, #f3eb89 100%);
     justify-self: flex-start;
     margin-top: 20px;
+    color: var(--bg-color-black);
+    transition: background-image .1s ease-in-out, background-position .1s ease-in-out;
+    background-size: 1px 200px;
 }
 
-.footer__button.btn {
-    color: var(--bg-color-black);
+.footer__button.btn:hover {
+    background-position:200px;
+    box-shadow: none;
+    transition: background-image .2s ease-in-out, background-position .1s ease-in-out;
 }
 
 .footer__social {
@@ -67,8 +72,14 @@
     justify-content: flex-end;
 }
 
-.footer__social > a> svg {
+.footer__social > a > svg {
     fill: var(--bg-color-white);
+    transition: opacity .1s ease-in-out;
+}
+
+.footer__social > a > svg:hover {
+    opacity: .6;
+    transition: opacity .2s ease-in-out;
 }
 
 .footer__socialnet {

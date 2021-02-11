@@ -14,7 +14,7 @@
 
     <header id="header">
         <div class="header">
-            <nav>
+            <nav id="menu">
                 <div class="nav">
                     <div class="nav__container container">            
                         <button class="nav__hamburger" aria-expanded="false">
@@ -22,6 +22,26 @@
                               <span class="nav__hamburger-line"></span>
                             </span>
                         </button>
+                        <ul class="nav__links">
+                            <li>
+                                <a href="">Home</a>
+                            </li>
+                            <li>
+                                <a href="">Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="">Contact</a>
+                            </li>                         
+                            <li>
+                                <a href="">Contact</a>
+                            </li>                         
+                            <li>
+                                <a href="">Contact</a>
+                            </li>                         
+                            <li>
+                                <a href="">Contact</a>
+                            </li>                         
+                        </ul>
                         <div class="nav__logo">
                             <a href="/">
                                 <img class="nav__image" src="assets/dąbex-logo.png" alt="dąbex-logo">
@@ -38,10 +58,10 @@
                     </div>
                 </div>
             </nav>
-            <div class="header__container">
+            <div class="header__container" style="background-image: url(../assets/slider.jpg);">
                 <div class="header__text">
                     <h1 class="header__title">Lorem</h1>
-                    <p class="header__paragraph">Lorem ipsum dolor sit amet.</p>
+                    <h3 class="header__paragraph">Lorem ipsum dolor sit amet.</h3>
                 </div>
             </div>
             <div class="header__arrow">
@@ -57,16 +77,19 @@
     </header>
     <main>
         <section>
-            <div class="video">
-                <img src="assets/filmik.jpg" alt="video">
+            <div class="video" style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(assets/group-people-working-out-business-plan-office.jpg);">
+                <div class="video__button">
+                    <img src="assets/play-button-arrowhead.png" alt="video-button">
+                </div>
             </div>
         </section>
         <section>
-            <div class="collection m-1">
+            <div class="collection m-1" style="background-image: url(assets/obrazek.jpg);">
                 <div class="collection__container">
+                    <div class="collection__image" style="background-image: url(assets/5-layers.png);"></div>
                     <div class="collection__text">
                         <p>Nasze podłogi</p>
-                        <h4>z naszej perspektywy</h4>
+                        <h3>z naszej perspektywy</h3>
                         <button class="collection__button btn">Zobacz</button>
                     </div>
                 </div>
@@ -75,14 +98,14 @@
         <section>
             <div class="floor">
                 <header>
-                    <h4 class="floor__header">Podłogi</h4>
+                    <h3 class="floor__header">Podłogi</h3>
                 </header>
                 <div class="floor__images">
                     <div class="floor__image" style="background-image: url(assets/ogrzewanie-podlogowe2.jpg);">
                         <button class="floor__button btn">Parkiety</button>
                     </div>
                     <div class="floor__image" style="background-image: url(assets/ciemne.jpg);">
-                        <button class="floor__button floor__button--white btn">Deski</button>
+                        <button class="floor__button btn">Deski</button>
                     </div>
                     <div class="floor__image" style="background-image: url(assets/bielone.jpg);">
                         <button class="floor__button btn">Jodła klasyczna</button>
@@ -101,7 +124,7 @@
                 <div class="about__container">
                     <div class="about__image--left" style="background-image: url(assets/Materiał.02.jpg);"></div>
                     <div class="about__text">
-                        <h4>Dąbex</h4>
+                        <h3>Dąbex</h3>
                         <div class="about__paragraph">
                             <p>Jesteśmy wiodącym polskim producentem parkietów i podłóg drewnianych w Europie. Od ponad 55 lat łączymy
                             z sukcesem rodzinną tradycję i nowatorskie rozwiązania technologiczne, uwzględniając przy tym najnowsze trendy
@@ -116,12 +139,12 @@
             </div>
         </section>
         <section>
-            <div class="info">
+            <div class="info" style="background-image: url('../assets/mountain-slopes-forest-hills-morning-fog.jpg.png');">
                 <section>
                     <div class="ecology container">
                         <div class="ecology__text">
                             <p>Za cel stawiamy sobie</p>
-                            <h4>dbałość o środowisko</h4>
+                            <h3>dbałość o środowisko</h3>
                             <div class="ecology__paragraph">
                                 <p>Naszym najważniejszym celem jest dbałość o wspólne dobro – środowisko naturalne. To był, jest i będzie zawsze priorytet dla naszej firmy.</p>
                                 <p>Pamiętajmy, że lasy i pochodzące z nich drewno to surowiec całkowicie odnawialny, a dzięki polityce jaką stosuje firma Dąbex, a za naszym pośrednictwem także nasi klienci, lasów w Polsce wciąż przybywa.</p>
@@ -149,28 +172,28 @@
                         <header>
                             <div class="numbers__header">
                                 <p>Dąbex</p>
-                                <h4>w liczbach</h4>
+                                <h3>w liczbach</h3>
                             </div>
                         </header>
-                        <div class="numbers__container container">
+                        <div class="numbers__container container" style="background-image: url('../assets/mountain-slopes-forest-hills-morning-fog_kopia_2.jpg');">
                             <div class="numbers__element">
                                 <img src="assets/handsome-bearded-guy-posing-against-white-wall.jpg" alt="" class="numbers__image">
                                 <div class="numbers__text">
-                                    <h4>1245</h4>
+                                    <h3>1245</h3>
                                     <p>zadowolonych klientów</p>
                                 </div>
                             </div>
                             <div class="numbers__element">
                                 <img src="assets/handsome-bearded-guy-posing-against-white-wall.jpg" alt="" class="numbers__image">
                                 <div class="numbers__text">
-                                    <h4>1245</h4>
+                                    <h3>1245</h3>
                                     <p>zadowolonych klientów</p>
                                 </div>
                             </div>
                             <div class="numbers__element">
                                 <img src="assets/handsome-bearded-guy-posing-against-white-wall.jpg" alt="" class="numbers__image">
                                 <div class="numbers__text">
-                                    <h4>1245</h4>
+                                    <h3>1245</h3>
                                     <p>zadowolonych klientów</p>
                                 </div>
                             </div>
@@ -182,11 +205,11 @@
         <section>
             <div class="trade m-1">
                 <div class="trade__container container">
-                    <div class="trade__image"></div>
+                    <div class="trade__image" style="background-image: url('../assets/crop-people-shaking-hands-conference.jpg');"></div>
                     <div class="trade__text">
                         <div class="trade__header">
                             <p>Program dla</p>
-                            <h4>partnerów franczyzowych</h4>
+                            <h3>partnerów franczyzowych</h3>
                         </div>
                         <div class="trade__paragraph">
                             <p>Kim jesteśmy?</p>
@@ -207,10 +230,10 @@
         </section>
         <section>
             <div class="rubra container">
-                <h4>Rubra Collection</h4>
+                <h3>Rubra Collection</h3>
                 <div class="rubra__container">
-                    <div class="rubra__image--left"></div>
-                    <div class="rubra__image--right">
+                    <div class="rubra__image--left" style="background-image: url('../assets/rubra-left.jpg');"></div>
+                    <div class="rubra__image--right" style="background-image: url('../assets/rubra-right.jpg');">
                         <div class="rubra__text">
                             <p>Rudra to kolejny owoc</p>
                             <p>naszej filozofii tworzenia</p>
@@ -256,7 +279,7 @@
                         <div class="example__hover"></div>
                     </div>
                 </div>
-                <div class="example__accent"></div>
+                <div class="example__accent" style="background-image: url('../assets/podłoga.jpg');"></div>
             </div>
         </section>
         <section>
@@ -302,7 +325,7 @@
                         <p class="f-w300">tel: 61 44 46 364</p>
                         <p class="f-w300">e-mail: dabex@parkietydabex.pl</p>
                     </div>
-                    <button class="footer__button btn">Napisz maila</button>
+                    <button class="btn footer__button">Napisz maila</button>
                 </div>
                 <div class="footer__contact">
                     <div>
@@ -340,5 +363,6 @@
         </div>
     </footer>
     
+<script src="index.js"></script>
 </body>
 </html>

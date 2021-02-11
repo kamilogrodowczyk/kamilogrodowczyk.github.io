@@ -22,7 +22,6 @@
 
 .rubra__image--left,
 .rubra__image--right {
-    background-image: url('../assets/rubra-left.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -31,7 +30,6 @@
 }
 
 .rubra__image--right {
-    background-image: url('../assets/rubra-right.jpg');
     width: 60%;
     position: relative;
 }

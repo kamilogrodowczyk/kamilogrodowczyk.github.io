@@ -1,5 +1,5 @@
 .trade {
-    height: 700px;
+    height: 70vh;
     width: 100%;
     position: relative;
 }
@@ -13,7 +13,6 @@
 }
 
 .trade__image {
-    background-image: url('../assets/crop-people-shaking-hands-conference.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
