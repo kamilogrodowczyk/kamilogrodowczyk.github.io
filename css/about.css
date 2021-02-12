@@ -3,36 +3,56 @@
 }
 
 .about__container {
-    /* height: 48vh; */
-    height: 480px;
     width: 100%;
     display: flex;
 }
 
 .about__container > * {
-    height: 100%;
-    width: 50%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .about__text {
-    width: 600px;
-    margin-left: auto;
-    height: 100%;
+    flex: 1;
+    margin-left: 2vw;
     padding: 0 75px;
     background-color: var(--bg-color-white);
     display: grid;
-    align-content: space-between;
+    align-content: center;
     justify-items: flex-start;
     
 }
 
 .about__image--right {
-    width: 55%;
+    flex: 1.7;
     margin-left: auto;
 }
 .about__image--left {
-    width: 12.5%;
+    flex: .25;
+}
+
+@media screen and (max-width: 1024px) {
+    
+    .about__image--right {
+        flex: .5;
+    }
+
+    .about__image--left {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    
+    .about__text {
+        padding: 0 2.5vw;
+        gap: 3vh;
+    }
+
+    .about__image--right {
+        display: none;
+    }
+
 }

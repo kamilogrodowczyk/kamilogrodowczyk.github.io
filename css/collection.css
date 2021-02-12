@@ -1,27 +1,81 @@
 .collection {
     width: 100%;
     height: 35vh;
+    display: flex;
+}
+
+.collection__left,
+.collection__right {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    flex: 1.7;
 }
 
-.collection__container {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 85vw;
+.collection__right {
+    flex: 1;
 }
 
-.collection__image {
+.collection__text::after {
+    content: '';
+    background-image: url('../assets/5-layers.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 280px;
-    height: 280px;
+    position: absolute;
+    right: 60%;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    filter: drop-shadow(10px 10px 150px black);
 }
 
 .collection__text {
-    margin-left: 2.5vw;
+    flex: 1;
+    display: grid;
+    justify-content: end;
+    justify-items: start;
+    align-content: center;
+    padding: 0 70px 0 100px;
+    position: relative;
+    height: 80%;
+    margin: auto 0;
+    white-space: nowrap;
+}
+
+.collection__text > * {
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .collection {
+        flex-direction: column;
+        height: 40vh;
+    }
+
+    .collection__left {
+        display: none;
+    }
+
+    .collection__right {
+        display: none;
+    }
+
+    .collection__text {
+        padding: 0;
+        justify-content: center;
+        justify-items: center;
+        white-space: normal;
+        padding-right: 5vw;
+    }
+
+    .collection__text::after {
+        z-index: -1;
+        opacity: .2;
+        right: 20%;
+        top: 52%;
+    }
 }

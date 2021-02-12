@@ -1,5 +1,4 @@
 .trade {
-    height: 70vh;
     width: 100%;
     position: relative;
 }
@@ -7,23 +6,22 @@
 .trade__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    height: 90%;
-    object-fit: cover;
+    gap: 3vw;
 }
 
 .trade__image {
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom;
-    width: 90%;
-    height: 100%;
+    background-position: center;
+    width: 100%;
+    justify-self: start;
 }
 
 .trade__text {
-    width: 90%;
+    width: 95%;
     display: grid;
     align-content: space-between;
+    gap: 5vh;
 }
 
 .trade__logo {

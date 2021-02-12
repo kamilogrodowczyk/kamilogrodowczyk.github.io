@@ -1,12 +1,13 @@
 .footer {
     width: 100%;
-    height: 50vh;
+    /* height: 50vh; */
     background-color: var(--bg-color-black);
     display: flex;
     align-items: center;
 }
 
 .footer__container {
+    padding: 10vh 0 15vh 0;
     height: 75%;
     width: 80%;
     display: flex;
@@ -84,7 +85,7 @@
 
 .footer__socialnet {
     position: absolute;
-    bottom: 0;
+    bottom: 7%;
     right: 0;
     height: 40px;
     display: flex;
