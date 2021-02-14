@@ -39,14 +39,14 @@
 .trade__contact--name {
     margin-bottom: 25px; 
     font-weight: 700;
-    font-size: 24px;
+    font-size: 1.2rem;
 }
 
 .trade__contact--number,
 .trade__contact--mail {
     position: relative;
     margin-left: 40px;
-    font-size: 24px;
+    font-size: 1.2rem;
 }
 
 .trade__contact--number::before,
@@ -61,4 +61,11 @@
 
 .trade__contact--mail::before {
     content: url('../assets/mail.svg');
+}
+
+@media screen and (max-width: 1024px) {
+
+    .trade__container {
+        grid-template-columns: 1fr;
+    }
 }

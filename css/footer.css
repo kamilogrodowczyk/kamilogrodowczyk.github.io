@@ -8,8 +8,6 @@
 
 .footer__container {
     padding: 10vh 0 15vh 0;
-    height: 75%;
-    width: 80%;
     display: flex;
     margin-top: auto;
     margin-bottom: auto;
@@ -46,10 +44,12 @@
 
 .footer__address {
     flex: 2;
+    padding: 0 10px;
 }
 
 .footer__contact {
     flex: 2;
+    padding: 0 10px;
 }
 
 .footer__button.btn {
@@ -86,7 +86,7 @@
 .footer__socialnet {
     position: absolute;
     bottom: 7%;
-    right: 0;
+    right: 10%;
     height: 40px;
     display: flex;
     white-space: nowrap;
@@ -98,4 +98,40 @@
     font-size: 12px;
     color: var(--bg-color-white);
     margin-right: -20px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .footer__social {
+        display: grid;
+        flex: .4;
+    }
+}
+@media screen and (max-width: 768px) {
+
+    .footer__container {
+        flex-wrap: wrap;
+    }
+
+    .footer__container > * {
+        flex: 1;
+        flex-basis: 250px;
+        padding: 2vh 0;
+    }
+
+    .footer__left {
+        order: 3;
+        height: 50%;
+        justify-content: end;
+    }
+    .footer__address {
+        order: 1;
+    }
+    .footer__contact {
+        order: 2;
+    }
+    .footer__social {
+        order: 4;
+        justify-content: start;
+    }
 }
