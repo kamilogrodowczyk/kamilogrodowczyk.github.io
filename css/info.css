@@ -23,6 +23,7 @@
     display: flex;
     align-items: flex-end;
     position: relative;
+    justify-content: center;
     z-index: 1;
 }
 
@@ -32,7 +33,7 @@
 
 .ecology__text {
     display: grid;
-    gap: 3vh;
+    /* gap: 2vh; */
     flex: 1.1;
     justify-items: start;
     justify-content: start;
@@ -160,7 +161,8 @@
 
     .ecology__map {
         position: relative;
-        width: 50%;
+        width: 80%;
+        margin: 0 auto;
     }
 
     .ecology__map::before {
@@ -175,5 +177,9 @@
         bottom: -2%;
         left: -10%;
         width: 30vw;
+    }
+
+    .ecology__paragraph {
+        max-width: 80%;
     }
 }

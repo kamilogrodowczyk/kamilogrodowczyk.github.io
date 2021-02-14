@@ -49,6 +49,8 @@
     .about__text {
         padding: 0 2.5vw;
         gap: 3vh;
+        width: 95%;
+        margin: 0 auto;
     }
 
     .about__image--right {
