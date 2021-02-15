@@ -3,6 +3,10 @@
     position: relative;
 }
 
+.trade.m-1 {
+    margin-bottom: 22vh;
+}
+
 .trade__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -18,17 +22,22 @@
 }
 
 .trade__text {
-    width: 95%;
+    width: 100%;
     display: grid;
     align-content: space-between;
     gap: 5vh;
 }
 
 .trade__logo {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     position: absolute;
-    bottom: 0;
-    left: 5%;
+    bottom: -12vh;
+    left: 2.5vw;
     z-index: -1;
+    height: 300px;
+    width: 300px;
 }
 
 .trade__contact--contact {
@@ -65,7 +74,15 @@
 
 @media screen and (max-width: 1024px) {
 
+    .trade.m-1 {
+        margin-bottom: 10vh;
+    }
+
     .trade__container {
         grid-template-columns: 1fr;
+    }
+
+    .trade__logo {
+        display: none;
     }
 }

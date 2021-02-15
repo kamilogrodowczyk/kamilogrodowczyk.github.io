@@ -171,7 +171,7 @@
 .numbers__image--right {
     padding-top: 5px;
     padding-left: 3px;
-    padding-bottom: .25px;
+    padding-bottom: 0px;
     padding-right: 0px;
     background: linear-gradient(190deg, rgba(34,34,34,1) 20%, rgba(255,255,255,1) 100%);
     background-position: -60px 140px;
@@ -267,21 +267,26 @@
 
     .ecology__map {
         position: relative;
-        width: 80%;
-        margin: 0 auto;
+        width: 100%;
+        margin: 0 auto 5vh;
+        order: 1;
     }
 
     .ecology__map::before {
         content: '';
         position: absolute;
-        right: 0;
+        left: 0;
         bottom: 3%;
+    }
+
+    .ecology__text {
+        order: 2;
     }
 
     .ecology__info {
         position: absolute;
         bottom: -2%;
-        left: -10%;
+        left: 0;
         width: 30vw;
     }
 
@@ -292,7 +297,25 @@
 
 @media screen and (max-width: 768px) {
 
+    .ecology__map::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 3%;
+    }
+
     .ecology__paragraph {
         width: 100%;
+    }
+
+    .ecology__info {
+        left: 0;
+        height: 13vh;
+        width: 50vw;
+    }
+
+    .ecology__info-circle {
+        bottom: 0;
+        left: 70%;
     }
 }

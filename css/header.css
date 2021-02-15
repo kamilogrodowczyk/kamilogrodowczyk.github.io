@@ -240,18 +240,22 @@
     .header__container {
         width: 95%;
         height: 75vh;
+        flex-direction: column;
+        justify-content: space-around;
     }
 
     .header__text {
         align-content: center;
+        padding-bottom: 0;
     }
 
     .header__arrow {
         display: none;
     }
 
-    .header__image {
-        display: none;
+    .header__images {
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
     }
 
     .header__accent {

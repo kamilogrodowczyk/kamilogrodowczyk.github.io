@@ -20,8 +20,7 @@
     background-color: var(--bg-color-white);
     display: grid;
     align-content: center;
-    justify-items: flex-start;
-    
+    justify-items: flex-start;    
 }
 
 .about__image--right {
@@ -30,6 +29,10 @@
 }
 .about__image--left {
     flex: .25;
+}
+
+.about__button {
+    margin-top: 1vh;
 }
 
 @media screen and (max-width: 1024px) {

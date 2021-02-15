@@ -20,15 +20,18 @@
 }
 
 .example__elements {
-    height: 75%;
+    height: 90%;
     display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
     align-content: space-between;
+    align-items: center;
     justify-items: center;
-    padding-top: 60px;
+    justify-content: center;
 }
 
 .example__elements > p {
     padding: 0 1vw;
+    text-align: center;
 }
 
 .example__circle {
