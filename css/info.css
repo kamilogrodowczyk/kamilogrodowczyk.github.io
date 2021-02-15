@@ -28,7 +28,7 @@
 }
 
 .ecology__paragraph {
-    max-width: 60%;
+    width: 60%;
 }
 
 .ecology__text {
@@ -143,11 +143,117 @@
     padding: 5vh 0;
 }
 
+.numbers__image {
+    border-radius: 50%;
+    background: rgb(34,34,34, 0);
+}
+
+.numbers__image--left {
+    padding-top: 1px;
+    padding-left: 0px;
+    padding-bottom: 3px;
+    padding-right: 3px;
+    background: linear-gradient(190deg, rgba(255,255,255,1) 0%, rgba(34,34,34,1) 50%);
+    background-position: 70px -140px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.numbers__image--middle {
+    padding-top: 0px;
+    padding-left: 3px;
+    padding-bottom: 3px;
+    padding-right: 0px;
+    background: linear-gradient(300deg, rgba(255,255,255,1) 20%, rgba(34,34,34,1) 60%);
+    background-position: 140px 50px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.numbers__image--right {
+    padding-top: 5px;
+    padding-left: 3px;
+    padding-bottom: .25px;
+    padding-right: 0px;
+    background: linear-gradient(190deg, rgba(34,34,34,1) 20%, rgba(255,255,255,1) 100%);
+    background-position: -60px 140px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.numbers__image:hover {
+    transition: background-position .51s ease-in-out;
+}
+
+.numbers__image--left:hover {
+    background-position: 70px 0px;
+}
+
+.numbers__image--middle:hover {
+    background-position: 5px 50px;
+}
+
+.numbers__image--right:hover {
+    background-position: -60px 0px;
+}
+
+.numbers__circle--left,
+.numbers__circle--middle,
+.numbers__circle--right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: transparent;
+    padding: 0;    
+}
+
+.numbers__circle--left::after,
+.numbers__circle--middle::after,
+.numbers__circle--right::after {
+    position: absolute;
+    right: 18%;
+    top: 0;
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--bg-color-black);
+    display: block;
+}
+
+.numbers__circle--left {
+    transform: rotate(-25deg);
+}
+
+.numbers__image:hover .numbers__circle--left {
+    transform: rotate(145deg);
+    transition: transform .55s ease-in-out;
+}
+
+.numbers__circle--middle {
+    transform: rotate(65deg);
+}
+
+.numbers__image:hover .numbers__circle--middle {
+    transform: rotate(225deg);
+    transition: transform .55s ease-in-out;
+}
+
+.numbers__circle--right {
+    transform: rotate(145deg);
+}
+
+.numbers__image:hover .numbers__circle--right {
+    transform: rotate(335deg);
+    transition: transform .55s ease-in-out;
+}
+
 .numbers__text  {
     text-align: center;
 }
 
-.numbers__text > h4 {
+.numbers__text > h3 {
     margin: 0;
 }
 
@@ -180,6 +286,13 @@
     }
 
     .ecology__paragraph {
-        max-width: 80%;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .ecology__paragraph {
+        width: 100%;
     }
 }
