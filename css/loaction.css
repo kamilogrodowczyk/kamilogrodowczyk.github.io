@@ -56,3 +56,12 @@
         width: 95%;
     }
 }
+
+@media screen and (max-width: 500px) {
+
+    .location__info {
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: center;
+        gap: 5vh;
+    }
+}

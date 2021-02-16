@@ -146,6 +146,14 @@
 .numbers__image {
     border-radius: 50%;
     background: rgb(34,34,34, 0);
+    transition: filter .2s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+
+.numbers__image:hover > img {
+    filter: brightness(90%);
+    transition: filter .3s ease-in-out;
 }
 
 .numbers__image--left {
@@ -179,19 +187,20 @@
     position: relative;
 }
 
-.numbers__image:hover {
-    transition: background-position .51s ease-in-out;
+.numbers__image.animated {
+    transition: background-position .41s .1s ease-in-out;
 }
 
-.numbers__image--left:hover {
+.numbers__image--left.animated  {
     background-position: 70px 0px;
+    transition: background-position .41s 0s ease-in-out;
 }
 
-.numbers__image--middle:hover {
+.numbers__image--middle.animated  {
     background-position: 5px 50px;
 }
 
-.numbers__image--right:hover {
+.numbers__image--right.animated  {
     background-position: -60px 0px;
 }
 
@@ -226,27 +235,31 @@
     transform: rotate(-25deg);
 }
 
-.numbers__image:hover .numbers__circle--left {
+.numbers__circle--left.animated,
+.numbers__circle--middle.animated,
+.numbers__circle--right.animated {
+    transition: transform .45s .1s ease-in-out;
+}
+
+.numbers__image--left.animated .numbers__circle--left.animated  {
     transform: rotate(145deg);
-    transition: transform .55s ease-in-out;
+    transition: transform .45s 0s ease-in-out;
 }
 
 .numbers__circle--middle {
     transform: rotate(65deg);
 }
 
-.numbers__image:hover .numbers__circle--middle {
+.numbers__image--middle.animated .numbers__circle--middle.animated  {
     transform: rotate(225deg);
-    transition: transform .55s ease-in-out;
 }
 
 .numbers__circle--right {
     transform: rotate(145deg);
 }
 
-.numbers__image:hover .numbers__circle--right {
+.numbers__image--right.animated  .numbers__circle--right.animated  {
     transform: rotate(335deg);
-    transition: transform .55s ease-in-out;
 }
 
 .numbers__text  {
@@ -267,6 +280,7 @@
 
     .ecology__map {
         position: relative;
+        height: 100%;
         width: 100%;
         margin: 0 auto 5vh;
         order: 1;
@@ -281,6 +295,7 @@
 
     .ecology__text {
         order: 2;
+        /* margin-top: 5vh; */
     }
 
     .ecology__info {
@@ -311,11 +326,14 @@
     .ecology__info {
         left: 0;
         height: 13vh;
-        width: 50vw;
+        width: 40vw;
+        z-index: 10;
+        background-color: rgba(255, 255, 255, .1);
+        backdrop-filter: blur(20px);
     }
 
     .ecology__info-circle {
-        bottom: 0;
-        left: 70%;
+        left: 35%;
+        z-index: 11;
     }
 }

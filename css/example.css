@@ -108,3 +108,21 @@
     }
 
 }
+
+@media screen and (max-width: 500px) {
+    
+    .example__circle {
+        width: 45px;
+        height: 45px;
+    }
+
+    .example__circle > svg {
+        height: 25px;
+        width: 25px;
+    }
+
+    .example__elements > p {
+        font-size: 12px;
+    }
+
+}

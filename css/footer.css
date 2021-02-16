@@ -114,24 +114,29 @@
     }
 
     .footer__container > * {
-        flex: 1;
-        flex-basis: 250px;
+        flex-basis: calc(50%);
         padding: 2vh 0;
     }
 
     .footer__left {
-        order: 3;
         height: 50%;
+        justify-content: start;
+    }
+
+    .footer__contact {
+        justify-content: start;
+    }
+
+    .footer__social {
         justify-content: end;
     }
-    .footer__address {
-        order: 1;
+
+    .footer__socialnet {
+        bottom: 2%;
+        right: 0;
     }
-    .footer__contact {
-        order: 2;
-    }
-    .footer__social {
-        order: 4;
-        justify-content: start;
+
+    .footer__socialnet > p {
+        font-size: 10px;
     }
 }
