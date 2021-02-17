@@ -40,6 +40,16 @@
     margin-right: 2vw;
 }
 
+.ecology__certificates {
+    display: flex;
+    align-items: center;
+}
+
+.ecology__certificates--white {
+    color: var(--bg-color-white);
+    text-shadow: 1px 1px 3px black;
+}
+
 .ecology__map {
     height: 50vh;
     position: relative;
@@ -65,12 +75,12 @@
     bottom: 0;
     left: 5%;
     z-index: 1;
-    height: 13vh;
+    min-height: 13vh;
     width: 18vw;
     border: 2px solid #cdcdcd;
     border-radius: 10px;
     text-align: left;
-    padding: 0 2vw;
+    padding: 1vh 2vw;
     display: grid;
     align-content: center;
 }
@@ -99,16 +109,6 @@
 .ecology__info-circle > svg {
     height: 40px;
     width: 40px;
-}
-
-.ecology__certificates {
-    display: flex;
-    align-items: center;
-}
-
-.ecology__certificates--white {
-    color: var(--bg-color-white);
-    text-shadow: 1px 1px 3px black;
 }
 
 .ecology__icon {
@@ -280,7 +280,7 @@
 
     .ecology__map {
         position: relative;
-        height: 100%;
+        min-height: 300px;
         width: 100%;
         margin: 0 auto 5vh;
         order: 1;
@@ -295,7 +295,7 @@
 
     .ecology__text {
         order: 2;
-        /* margin-top: 5vh; */
+        flex: .5;
     }
 
     .ecology__info {
@@ -323,13 +323,17 @@
         width: 100%;
     }
 
+    .ecology__text {
+        order: 2;
+        flex: .5;
+    }
+
     .ecology__info {
         left: 0;
         height: 13vh;
         width: 40vw;
         z-index: 10;
-        background-color: rgba(255, 255, 255, .1);
-        backdrop-filter: blur(20px);
+        background-color: rgba(255, 255, 255, .9);
     }
 
     .ecology__info-circle {
