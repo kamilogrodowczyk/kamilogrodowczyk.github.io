@@ -35,11 +35,6 @@
     transition: background-color .5s ease-in-out;
 }
 
-.nav.fixed > .nav__container > .nav__logo,
-.nav.fixed > .nav__container > .nav__social {
-    visibility: hidden;
-}
-
 .nav__container {
     height: 100%;
     display: flex;
@@ -53,7 +48,6 @@
     cursor: pointer;
     background-color: transparent;
     border: 0;
-    outline: none;
     margin-right: 10px;
     transition: transform .3s .1s ease-in-out, visibility 0s .4s;
 }
