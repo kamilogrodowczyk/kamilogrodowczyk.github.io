@@ -257,6 +257,10 @@
 
 @media screen and (max-width: 768px) {
 
+    .nav {
+        height: 15vh;
+    }
+
     .nav__logo > a > img {
         width: 150px;
     }
