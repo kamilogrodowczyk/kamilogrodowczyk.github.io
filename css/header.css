@@ -201,15 +201,15 @@
     gap: 2vh;
     margin-top: -25px;
     transform: translateY(-5vh);
-    opacity: 0;
+    opacity: 1;
     will-change: transform;
 }
 
-.header__images.animated {
+/* .header__images.animated {
     transform: translateY(0);
     opacity: 1;
     transition: transform 2s .2s ease-in-out, opacity 2s .2s ease-in-out;
-}
+} */
 
 .header__image {
     width: 22vh;
