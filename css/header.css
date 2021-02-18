@@ -200,7 +200,7 @@
     display: grid;
     gap: 2vh;
     margin-top: -25px;
-    transform: translateY(-5vh);
+    /* transform: translateY(-5vh); */
     opacity: 1;
     will-change: transform;
 }
