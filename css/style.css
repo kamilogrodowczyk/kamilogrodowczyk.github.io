@@ -15,10 +15,6 @@
     --bg-color-white: #fff;
 }
 
-html, body {
-    height: 100%;
-}
-
 *, *::after, *::before {
     margin: 0;
     padding: 0;
