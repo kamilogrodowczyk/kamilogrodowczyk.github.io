@@ -289,13 +289,11 @@
         grid-template-columns: 1fr 1fr 1fr;
         justify-items: center;
         justify-content: end;
-        gap: 1vw;
-        /* margin-bottom: -1vh; */
+        /* gap: 1vw; */
     }
 
     .header__image {
         width: 100%;
-        height: 100%;
     }
 
     .header__accent {
