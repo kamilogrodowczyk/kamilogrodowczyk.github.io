@@ -58,17 +58,19 @@
                     </div>
                 </div>
             </nav>
-            <div class="header__container" style="background-image: url(assets/slider.jpg);">
-                <div class="header__text animate">
-                    <h1 class="header__title">Lorem</h1>
-                    <h3 class="header__paragraph">Lorem ipsum dolor sit amet.</h3>
+            <section id="myCarousel" aria-roledescription="carousel" aria-label="Podłogi firmy Dąbex">
+                <div class="header__container" role="group" id="myCarousel-items" aria-roledescription="slide" aria-label="1 of 3" style="background-image: url(assets/slider.jpg);">
+                    <div class="header__text animate">
+                        <h1 class="header__title">Lorem</h1>
+                        <h3 class="header__paragraph">Lorem ipsum dolor sit amet.</h3>
+                    </div>
+                    <div class="header__images animate">
+                        <button class="header__button" aria-controls="myCarousel-items" aria-label="1"><img class="header__image" src="assets/łódź.jpg" alt="podłogi-łódź"></button>
+                        <button class="header__button" aria-controls="myCarousel-items" aria-label="2"><img class="header__image" src="assets/poznań.jpg" alt="podłogi-poznań"></button>
+                        <button class="header__button" aria-controls="myCarousel-items" aria-label="3"><img class="header__image" src="assets/szczecin.jpg" alt="podłogi-szczecin"></button>
+                    </div>
                 </div>
-                <div class="header__images animate">
-                    <img class="header__image" src="assets/łódź.jpg" alt="podłogi-łódź">
-                    <img class="header__image" src="assets/poznań.jpg" alt="podłogi-poznań">
-                    <img class="header__image" src="assets/szczecin.jpg" alt="podłogi-szczecin">
-                </div>
-            </div>
+            </section>
             <div class="header__arrow">
                 <p class="header__arrow-text">Pokaż wszystkie nasze lokalizacje</p>                    
             </div>
