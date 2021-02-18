@@ -3,7 +3,7 @@ export default function observerAnimation() {
     const options = {
         root: null,
         threshhold: 0.5,
-        rootMargin: '0px 0px -20% 0px'
+        rootMargin: '0px 0px -10% 0px'
      };
 
     const observer = new IntersectionObserver((entries, observer) => {
