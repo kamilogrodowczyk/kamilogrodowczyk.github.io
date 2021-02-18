@@ -13,7 +13,7 @@
 .header {
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 90%;
     width: 100%;
     align-items: center;
     justify-content: space-around;
@@ -257,8 +257,12 @@
 
 @media screen and (max-width: 768px) {
 
+    .header {
+        height: 100%;
+    }
+
     .nav {
-        height: 15vh;
+        height: 20vh;
     }
 
     .nav__logo > a > img {
@@ -269,13 +273,9 @@
         height: 2px;
     }
 
-    .header {
-        height: 100vh;
-    }
-
     .header__container {
         width: 95%;
-        height: 75vh;
+        height: 78vh;
         flex-direction: column;
         justify-content: space-around;
     }
@@ -293,6 +293,7 @@
         grid-template-columns: 1fr 1fr 1fr;
         justify-items: center;
         justify-content: end;
+        margin-bottom: -2vh;
         /* gap: 1vw; */
     }
 
