@@ -51,14 +51,14 @@
     
     .about__container {
         padding: 0;
-        width: 95vw;
+        width: 90vw;
         margin: 0 auto;
     }
     
     .about__text {
         padding: 0;
         gap: 3vh;
-        width: 95%;
+        width: 100%;
         margin: 0 auto;
     }
 

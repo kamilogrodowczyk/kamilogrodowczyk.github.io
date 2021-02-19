@@ -1,41 +1,49 @@
 .footer {
     width: 100%;
-    /* height: 50vh; */
     background-color: var(--bg-color-black);
     display: flex;
     align-items: center;
 }
 
 .footer__container {
-    padding: 10vh 0 15vh 0;
-    display: flex;
-    margin-top: auto;
-    margin-bottom: auto;
-    position: relative;
+    padding: 10vh 0;
+    display: grid;
+    gap: 0 20px;
+    justify-content: space-between;
+    grid-template-areas: 
+        'logo address contact social'
+        'copyright address contact social'
+        'copyright address contact social'
+        'copyright socialnet socialnet socialnet'
+        'copyright socialnet socialnet socialnet';
 }
 
-.footer__container > * {
+.footer__address,
+.footer__contact {
     display: grid;
     justify-content: center;
-    align-content: flex-start;
-    height: 90%;
-    flex: 1;
-    padding: 0 5px;
-    gap: 40px;
+    align-content: space-between;
+    gap: 3vh;
 }
 
 .footer__left {
-    flex: .5;
-    height: 100%;
-    align-content: space-between;
+    grid-area: logo;
 }
 
-.footer__left p {
+.footer__copyright {
+    grid-area: copyright;
+    justify-self: start;
+    grid-row: 3 / 5;
+    padding-bottom: 3vh;
+}
+
+.footer__copyright > p {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
+    white-space: nowrap;
 }
 
-.footer__left p,
+.footer__copyright p,
 .footer__address div p,
 .footer__contact div p {
     color: var(--bg-color-white);
@@ -43,19 +51,16 @@
 }
 
 .footer__address {
-    flex: 2;
-    padding: 0 10px;
+    grid-area: address;
 }
 
 .footer__contact {
-    flex: 2;
-    padding: 0 10px;
+    grid-area: contact;
 }
 
 .footer__button.btn {
     background-image: linear-gradient(#d7a950 0%, #f3eb89 100%);
     justify-self: flex-start;
-    margin-top: 20px;
     color: var(--bg-color-black);
     transition: background-image .1s ease-in-out, background-position .1s ease-in-out;
     background-size: 1px 200px;
@@ -68,9 +73,7 @@
 }
 
 .footer__social {
-    display: flex;
-    flex: .5;
-    justify-content: flex-end;
+    grid-area: social;
 }
 
 .footer__social > a > svg {
@@ -84,43 +87,67 @@
 }
 
 .footer__socialnet {
-    position: absolute;
-    bottom: 7%;
-    right: 10%;
+    grid-area: socialnet;
     height: 40px;
     display: flex;
     white-space: nowrap;
-    align-items: flex-end;
+    align-self: end;
+    justify-self: end;
     padding: 0;
 }
 
 .footer__socialnet > p {
     font-size: 12px;
     color: var(--bg-color-white);
-    margin-right: -20px;
+    margin: 0;
+    padding: 5px 10px 0 0;
 }
 
 @media screen and (max-width: 1024px) {
 
+    .footer__container {
+        justify-content: space-between;
+        justify-items: center;
+        grid-template-areas: 
+        'copyright logo logo empty'
+        'copyright logo logo empty'
+        'copyright address contact empty'
+        'copyright address contact empty'
+        'copyright socialnet socialnet socialnet'
+        'copyright socialnet socialnet socialnet';
+    }
+
+    .footer__copyright {
+        grid-row: 4 / 5;
+        padding-bottom: 3vh;
+    }
+
+    .footer__left {
+        padding-bottom: 3vh;
+        justify-self: center;
+    }
+
     .footer__social {
-        display: grid;
-        flex: .4;
+        display: none;
+    }
+
+    .footer__copyright.footer__copyright--blank {
+        grid-area: empty;
+    }
+
+    .footer__copyright.footer__copyright--blank > p {
+        color: transparent;
+        user-select: none;
+    }
+
+    .footer__socialnet {
+        margin-top: 30px;
     }
 }
 @media screen and (max-width: 768px) {
 
-    .footer__container {
-        flex-wrap: wrap;
-    }
-
     .footer__container > * {
-        flex-basis: calc(50%);
         padding: 2vh 0;
-    }
-
-    .footer__left {
-        height: 50%;
-        justify-content: start;
     }
 
     .footer__contact {
@@ -138,5 +165,22 @@
 
     .footer__socialnet > p {
         font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .footer__container {
+        grid-template-areas: 
+        'copyright logo empty'
+        'copyright contact empty'
+        'copyright address empty'
+        'copyright socialnet socialnet'
+        'copyright socialnet socialnet';
+        text-align: center;
+    }
+
+    .footer__button.btn {
+        justify-self: center;
     }
 }

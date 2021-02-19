@@ -1,12 +1,12 @@
 @keyframes arrow-right {
     0% {
-        transform: translateX(0);
+        transform: rotate(var(--rotate, 0deg)) translateX(0);
     }
     50% {
-        transform: translateX(50%);
+        transform: rotate(var(--rotate, 0deg)) translateX(50%);
     }
     100% {
-        transform: translateX(0);
+        transform: rotate(var(--rotate, 0deg)) translateX(0);
     }
 }
 
@@ -28,13 +28,14 @@
 
 .nav.fixed {
     position: fixed;
-    top: 0;
+    bottom: 100%;
     left: 0;
     right: 0;
-    padding: 3vh 0;
     z-index: 50;
+    padding: 3vh 0;
+    transform: translateY(99%);
     background-color: var(--bg-color-black);
-    transition: background-color .5s ease-in-out;
+    transition: transform .5s ease-in-out;
 }
 
 .nav__container {
@@ -94,7 +95,7 @@
     display: flex;
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 101vh;
     background-color: var(--bg-color-black);
     top: 0;
     right: 0;
@@ -234,7 +235,6 @@
 .header__arrow {
     white-space: nowrap;
     display: flex;
-    /* height: 5vh; */
     height: 15%;
     align-items: start;
     width: 80%;
@@ -278,9 +278,9 @@
         width: 150px;
     }
 
-    #nav {
+    /* #nav {
         height: 30%;
-    }
+    } */
 
     .nav__hamburger-line {
         height: 2px;
@@ -288,39 +288,62 @@
 
     #myCarousel {
         width: 95%;
-        height: 80%;
+        height: 70%;
     }
 
-    .header__container {
+    /* .header__container {
         width: 100%;
         height: 100%;
         flex-direction: column;
         justify-self: end;
         justify-content: space-around;
-    }
+    } */
 
-    .header__text {
+    /* .header__text {
         align-content: center;
         padding-bottom: 0;
-    }
+    } */
 
     .header__arrow {
-        display: none;
+       height: 5%;
+       width: 94%;
+       padding: 0;
     }
 
     .header__images {
-        grid-template-columns: repeat(3, 1fr);
-        justify-items: center;
-        justify-content: center;
-        margin-top: 0;
-        margin-bottom: -1vh;
+        height: 100%;
+        margin-top: 8vh;
     }
 
     .header__image {
-        width: 100%;
+        width: 20vh;
     }
 
     .header__accent {
         height: 40vh;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .header__images {
+        height: 100%;
+        margin-top: -.5%;
+        align-content: space-between;
+    }
+
+    .header__image {
+        height: 100%;
+    }
+
+    .header__arrow-text::after {
+        content: url('../assets/right-arrow.svg');
+        display: inline-block;
+        position: absolute;
+        left: 107%;
+        top: -20%;
+        width: 35px;
+        --rotate: -90deg;
+        animation: arrow-right 2s ease-in-out infinite;
     }
 }
