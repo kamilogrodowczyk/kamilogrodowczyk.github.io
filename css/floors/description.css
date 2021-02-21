@@ -1,0 +1,320 @@
+.description {
+    width: 100%;
+}
+
+.description__container {
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 4vh;
+    grid-template-areas: 
+        'text1 text1 example labels'
+        'details image example labels'
+        'details image button button'
+        'details image text2 text2'
+        'details image text2 text2';
+}
+
+.description__information--up {
+    grid-area: text1;
+    width: 70%;
+}
+
+.description__labels {
+    grid-area: labels;
+    display: grid;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-items: end;
+    cursor: pointer;
+    gap: 2vh;
+}
+
+.description__labels--first,
+.description__labels--second,
+.description__labels--third,
+.description__labels--fourth {
+    font-size: 30px;
+    border: 2px solid #ebebeb;
+    color: #ebebeb;
+    padding: 7px;
+    border-radius: 5px;
+    position: relative;
+    text-align: center;
+}
+
+.description__labels--first::after,
+.description__labels--first::before,
+.description__labels--second::after,
+.description__labels--second::before,
+.description__labels--4F::after,
+.description__labels--4F::before, 
+.description__labels--fourth::after {
+    content: '';
+    position: absolute;
+    background-color: #ebebeb;
+}
+
+.description__labels--first:hover,
+.description__labels--second:hover,
+.description__labels--third:hover,
+.description__labels--fourth:hover {
+    border-image: linear-gradient(to left, #d7a950 0%, #f3eb89 100%) 1;
+    background-image: linear-gradient(to left, #d7a950 0%, #f3eb89 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description__labels--first::after,
+.description__labels--first::before {
+    top: 50%;
+    transform: translateY(-50%);    
+    padding: 20px 1.5px;
+}
+
+.description__labels--first::after {
+    right: 5%;
+}
+
+.description__labels--first::before {
+    left: 5%;
+}
+
+.description__labels--second::after,
+.description__labels--second::before {
+    left: 5%;    
+    right: 5%;
+    padding: 3px 1.5px;
+}
+
+.description__labels--second::after {
+    bottom: 9%;
+}
+
+.description__labels--second::before {
+    top: 10%;
+}
+
+.description__labels--4F {
+    position: relative;
+    font-size: 25px;
+    padding: 3.5px;
+}
+
+.description__labels--4F::after,
+.description__labels--4F::before {
+    top: 20%;
+    bottom: 15%;
+    padding: 4px 2px;
+}
+
+.description__labels--4F::after {
+    right: -10%;
+}
+
+.description__labels--4F::before {
+    left: -10%; 
+}
+
+.description__labels--second:hover > .description__labels--4F {
+    background-image: linear-gradient(to left, #d7a950 0%, #f3eb89 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+.description__labels--third,
+.description__labels--fourth {
+    padding-top: 3.5px;
+    padding-bottom: 3.5px;
+}
+
+.description__labels--third > svg,
+.description__labels--fourth > svg {
+    width: 35.5px;
+    height: 35px;
+    fill: #ebebeb;
+}
+
+.description__labels--fourth {
+    position: relative;
+}
+
+.description__labels--fourth::after {
+    bottom: 10%;
+    left: 5%;
+    right: 5%;
+    padding: 4px 0;
+}
+
+.description__labels--third:hover > svg,
+.description__labels--fourth:hover > svg {
+    fill: url(#my-cool-gradient);
+}
+
+.description__labels--first:hover::before,
+.description__labels--first:hover::after,
+.description__labels--second:hover::before,
+.description__labels--second:hover::after,
+.description__labels--second:hover > .description__labels--4F::before,
+.description__labels--second:hover > .description__labels--4F::after,
+.description__labels--fourth:hover::after  {
+    background-image: linear-gradient(to left, #d7a950 0%, #f3eb89 100%);
+}
+
+.description__details {
+    grid-area: details;
+    grid-row: 2 / 5;
+}
+
+.description__details > div {
+    margin-bottom: 20px;
+}
+
+.description__details > div > p {
+    margin: 0;
+}
+
+.description__circle {
+    grid-area: image;
+    justify-self: center;
+    padding-top: 2vh;
+}
+
+.description__circle > img {
+    background-color: var(--bg-color-white);
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.description__button {
+    grid-area: button;
+    align-self: end;
+    justify-self: end;
+}
+
+.description__information--down {
+    grid-area: text2;
+    align-self: end;
+    justify-self: end;
+    position: relative;
+}
+
+.description__information--down::before {
+    content: url('../../assets/information.svg');
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 27px;
+    height: 27px;
+}
+
+.description__title {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .description__container {
+        gap: 2vh;
+        grid-template-areas: 
+        'text1 text1 labels'
+        'details image labels'
+        'details image labels'
+        'details image labels'
+        'text2 text2 text2'
+        'button button button';
+    }
+
+    .description__information--up {
+        width: 100%;
+    }
+
+    .description__labels {
+        grid-row: 2 / 4;
+    }
+
+    .description__button {
+        justify-self: center;
+    }
+
+    .description__circle {
+        justify-self: center;
+        padding-top: 2vh;
+        align-items: flex-end;
+        grid-row: 3 / 4;
+    }
+
+    .description__circle > img {
+        width: 180px;
+        padding: 15px;
+    }
+
+    .description__information--down::before {
+        left: 150px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    
+    .description__container {
+        background-position: 100% 50%;
+        background-size: 70%;
+        gap: 3vh;
+        grid-template-areas: 
+        'text1 text1 text1'
+        'details details details'
+        'details details details'
+        'details details details'
+        'image image image'
+        'labels labels labels'
+        'text2 text2 text2'
+        'button button button';
+    } 
+
+    .description__details {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        width: 75%;
+        margin: 0 auto;
+        gap: 1vw;
+    }
+
+    .description__labels {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        grid-template-rows: 1fr;
+        width: 100%;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content: center;
+        cursor: pointer;
+        gap: 1vw;
+    }
+
+    .description__circle {
+        justify-self: center;
+        align-self: end;
+        padding: 0;
+    }
+
+    .description__circle > img {
+        width: 100px;
+        padding: 10px;
+    }
+
+    .description__title {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    .description__container {
+        background-position: 100% 60%;
+    } 
+}

@@ -18,7 +18,7 @@
 
 .collection__text::after {
     content: '';
-    background-image: url('../assets/5-layers.png');
+    background-image: url('../../assets/5-layers.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
