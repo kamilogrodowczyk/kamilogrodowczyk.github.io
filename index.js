@@ -6,7 +6,7 @@ import mobileScreen from './modules/mobileScreen.js';
 import carousel from './modules/carousel.js';
 
 function init() {
-	mobileScreen();
+	// mobileScreen();
 	carousel();
 	hamburgerMenu();
 	observerAnimation();
