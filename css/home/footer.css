@@ -119,7 +119,7 @@
 
     .footer__copyright {
         grid-row: 4 / 5;
-        padding-bottom: 3vh;
+        padding-bottom: 6vh;
     }
 
     .footer__left {
@@ -146,9 +146,9 @@
 }
 @media screen and (max-width: 768px) {
 
-    .footer__container > * {
+    /* .footer__container > * {
         padding: 2vh 0;
-    }
+    } */
 
     .footer__contact {
         justify-content: start;
@@ -161,6 +161,7 @@
     .footer__socialnet {
         bottom: 2%;
         right: 0;
+        white-space: normal;
     }
 
     .footer__socialnet > p {

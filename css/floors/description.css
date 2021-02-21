@@ -268,7 +268,6 @@
         'text1 text1 text1'
         'details details details'
         'details details details'
-        'details details details'
         'image image image'
         'labels labels labels'
         'text2 text2 text2'
@@ -281,6 +280,7 @@
         width: 75%;
         margin: 0 auto;
         gap: 1vw;
+        grid-row: 2 / 4;
     }
 
     .description__labels {
@@ -294,12 +294,14 @@
         justify-content: center;
         cursor: pointer;
         gap: 1vw;
+        grid-row: 5;
     }
 
     .description__circle {
         justify-self: center;
         align-self: end;
         padding: 0;
+        grid-row: 4;
     }
 
     .description__circle > img {
