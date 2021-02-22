@@ -27,7 +27,7 @@
 }
 
 .nav {
-    bottom: 100%;
+    top: 0;
     transform: translateY(0%);
 }
 
@@ -35,11 +35,11 @@
     position: fixed;
     left: 0;
     right: 0;
+    top: 0;
     z-index: 50;
     padding: 3vh 0;
     background-color: var(--bg-color-black);
-    transition: all .5s ease-in-out;
-    transform: translateY(99%);
+    transition: padding .5s ease-in-out;
 }
 
 .nav__container {
