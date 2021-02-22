@@ -26,11 +26,6 @@
     height: 25%;
 }
 
-.nav {
-    top: 0;
-    transform: translateY(0%);
-}
-
 .nav.fixed {
     position: fixed;
     left: 0;
@@ -336,9 +331,9 @@
         align-content: space-between;
     }
 
-    .header__image {
+    /* .header__image {
         height: 100%;
-    }
+    } */
 
     .header__arrow-text::after {
         content: url('../assets/right-arrow.svg');
