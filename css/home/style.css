@@ -103,7 +103,11 @@ svg {
 }
 
 .m-y1 {
-    margin-top: 100px;
+    margin-top: 10vh;
+}
+
+.m-y2 {
+    margin-top: 5vh;
 }
 
 .btn {

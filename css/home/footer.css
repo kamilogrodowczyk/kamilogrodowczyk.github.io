@@ -154,6 +154,10 @@
         justify-content: start;
     }
 
+    .footer__address {
+        margin-top: 3vh;
+    }
+
     .footer__social {
         justify-content: end;
     }
