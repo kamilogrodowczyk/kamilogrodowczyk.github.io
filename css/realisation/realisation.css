@@ -1,0 +1,83 @@
+.realisation {
+    width: 100%;
+    height: 100%;
+}
+
+.realisation__container {
+    display: grid;
+    gap: 8vh;
+    height: 100%;
+}
+
+.realisation__images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vh;
+    width: 100%;
+}
+
+.realisation__images > * {
+    height: 15vw;
+    width: 100%;
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
+}
+
+.realisation__images > *:hover:not(.realisation__black) {
+    opacity: .8;
+    transition: opacity .2s ease-in-out;
+    cursor: pointer;
+}
+
+.realisation__image,
+.realisation__image--big {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.realisation__image--big {
+    grid-column: 1 / -1;
+}
+
+.realisation__black {
+    background-color: var(--bg-color-black);
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.realisation__info {
+    position: absolute;
+    left: 15%;
+    top: 20%;
+    color: var(--bg-color-white);
+    display:block;
+    clear: both;
+    user-select: none;
+}
+
+.realisation__info::after {
+    content: 'rustikal' / '';
+    display: block;
+    user-select: text;
+}
+
+.realisation__info > span {
+    color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+
+    .realisation__images {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .realisation__images > * {
+        height: 35vw;
+    }
+
+    .realisation__info {
+        left: 10%;
+    }
+}
