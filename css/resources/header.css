@@ -6,7 +6,7 @@
 .header__container {
     width: 90%;
     height: 75%;
-    justify-self: flex-start;
+    justify-self: flex-end;
     justify-content: center;
     display: flex;
 }
@@ -14,10 +14,8 @@
 .header__text {
     display: grid;
     justify-items: flex-start;
-    justify-content: flex-start;
     align-content: center;
     padding: 0;
-    font-size: 0;
 }
 
 .header__text > * {
@@ -31,6 +29,6 @@
     }
 
     .header__text {
-        justify-content: center;
+        width: 80%;
     }
 }

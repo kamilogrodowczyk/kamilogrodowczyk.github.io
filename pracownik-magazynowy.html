@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' media='screen' href='css/home/style.css'>  
-    <link rel='stylesheet' media='screen' href='css/floors/style.css'>
+    <link rel='stylesheet' media='screen' href='css/jobs/style.css'>
+    <link rel='stylesheet' media='screen' href='css/worker/style.css'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <title>Dąbex Podłogi</title>
+    <title>Dąbex Pracownik magazynowy</title>
 </head>
 <body>
 
@@ -35,10 +36,13 @@
                             </li>  
                             <li>
                                 <a href="oferty-pracy.html">Oferty pracy</a>
-                            </li> 
+                            </li>    
                             <li>
                                 <a href="materialy.html">Materiały do pobrania</a>
-                            </li>                                                 
+                            </li>                                             
+                            <li>
+                                <a href="pracownik-magazynowy.html">Pracownik magazynowy</a>
+                            </li>                                             
                         </ul>
                         <div class="nav__logo">
                             <a href="/">
@@ -56,103 +60,70 @@
                     </div>
                 </div>
             </nav>
-            <div class="header__container" style="background-image: url(assets/1594897060.jpg);">
-                <div class="header__text container animate">
-                    <h1 class="header__title">Dąb Thermo Marte</h1>
-                    <h3 class="header__paragraph">Rubra Collection</h3>
-                </div>
+            <div class="header__container" style="background-image: url(assets/worker-holding-wood-plank-working-furniture-factory-wood-processing-industry.jpg);"></div>
             </div>
             <div class="header__accent"></div>
         </div>
     </header>
     <main>
        <article>
-            <div class="description m-1">
-                <div class="description__container container" style="background-image: url(assets/1538484667.jpg);">
-                    <div class="description__information--up">
-                        <p>Podłoga utrzymana w odcieniach ciepłego brązu, gdzie czekolada miesza się z akcentem czerwonego chili. Wyjątkowa ​​​​​​​i bardzo elegancka będzie ozdobą każdego wnętrza</p>
+           <div class="worker m-1">
+               <div class="worker__container container">
+                   <div class="worker__elements">
+                        <div class="worker__text">
+                            <h3>Pracownik magazynowy</h3>
+                            <div class="worker__paragraph">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo</p>
+                            </div>
+                        </div>
+                        <aside>
+                            <div class="worker__city">
+                                <div class="worker__info">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <linearGradient id="my-cool-gradient" x2="1" y2="1">
+                                            <stop offset="0%" stop-color="#d7a950" />
+                                            <stop offset="100%" stop-color="#f3eb89" />
+                                        </linearGradient>
+                                        <path d="M256 0C153.755 0 70.573 83.182 70.573 185.426c0 126.888 165.939 313.167 173.004 321.035 6.636 7.391 18.222 7.378 24.846 0 7.065-7.868 173.004-194.147 173.004-321.035C441.425 83.182 358.244 0 256 0zm0 278.719c-51.442 0-93.292-41.851-93.292-93.293S204.559 92.134 256 92.134s93.291 41.851 93.291 93.293-41.85 93.292-93.291 93.292z"/></svg>
+                                    <p class="f-w700">Grodzisk Wielkopolski</p>
+                                </div>
+                            </div>
+                        </aside>
+                   </div>
+                    <form action="" method="GET" class="worker__form">
+                        <div class="worker__wrapper">
+                            <div class="worker__input">
+                                <input type="text" class="worker__input--name" placeholder="Imię i nazwisko">
+                                <input type="email" class="worker__input--email" placeholder="Adres e-mail">
+
+                                <input type="tel" class="worker__input--phone" placeholder="Telefon kontaktowy">
+                                <input type="text" class="worker__input--statement" placeholder="Stanowisko">
+
+                                <div class="worker__input--attachment">
+                                    <p>Załącznik</p>
+                                    <label for="file-upload">
+                                        <input type="file" accept=".docx, .pdf" value="" id="file-upload" class="worker__input--attachment" placeholder="Załącznik CV">
+                                    </label>
+                                </div>
+
+                                <textarea name="" id="" cols="30" rows="10" class="worker__input--message" placeholder="Wiadomość dla pracodawcy"></textarea>
+
+                                <div class="worker__input--checkbox">
+                                    <input type="checkbox" name="" id="agree">
+                                    <label for="agree">Wyrażam zgodę na przetwarzanie danych osobowych* - CZYTAJ WIĘCEJ</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="worker__button btn">Aplikuj</button>
+                    </form>
+                    <div class="worker__back">
+                        <a href="oferty-pracy.html">Powrót</a>
                     </div>
-                    <div class="description__details">
-                        <div>
-                            <p>Gatunek</p>
-                            <p class="f-w700">Dąb</p>
-                        </div>
-                        <div>
-                            <p>Klasa drewna</p>
-                            <p class="f-w700">4</p>
-                        </div>
-                        <div>
-                            <p>Wykończenie</p>
-                            <p class="f-w700">Naturell</p>
-                        </div>
-                        <div>
-                            <p>Fazowanie</p>
-                            <p class="f-w700">Tak</p>
-                        </div>
-                        <div>
-                            <p>Szczotkowanie</p>
-                            <p class="f-w700">Tak</p>
-                        </div>
-                        <div>
-                            <p>Na ogrzewanie podłogowe</p>
-                            <p class="f-w700">Tak</p>
-                        </div>
-                        <div>
-                            <p>Dostępne wymiary</p>
-                            <p class="f-w700">13x17x490</p>
-                        </div>
-                    </div>
-                    <div class="description__circle">
-                        <img src="assets/pine-wood-texture.png" alt="drewno">
-                    </div>
-                    <div class="description__labels">
-                        <div class="description__labels--first f-w700">2F</div>
-                        <div class="description__labels--second f-w700">
-                            <div class="description__labels--4F">4F</div>
-                        </div>
-                        <div class="description__labels--third f-w700">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248.151 248.151">
-                                <linearGradient id="my-cool-gradient" x2="1" y2="1">
-                                    <stop offset="0%" stop-color="#d7a950" />
-                                    <stop offset="100%" stop-color="#f3eb89" />
-                                </linearGradient>
-                                <path d="M134.475 8.551c-6.8-11.6-14-11.2-20.8 0-31.2 46.4-78.4 116-78.4 150.8 0 24.4 10 46.8 26 62.8s38.4 26 62.8 26 46.8-10 62.8-26 26-38.4 26-62.8c0-35.2-47.2-104.4-78.4-150.8zm53.6 190.4c-6.4 10.4-15.6 19.6-26.8 26-5.2 2.8-11.6 1.2-14.4-4-3.2-5.6-1.2-12 4-14.8 8-4.4 14.4-10.8 19.2-18.4 4.8-7.6 7.6-16.4 8-25.6.4-6 5.2-10.4 11.2-10 6 .4 10.4 5.2 10 11.2-.8 12.8-4.8 24.8-11.2 35.6z"/></svg>
-                        </div>
-                        <div class="description__labels--fourth f-w700">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.822 192.822">
-                                <linearGradient id="my-cool-gradient" x2="1" y2="1">
-                                    <stop offset="0%" stop-color="#d7a950" />
-                                    <stop offset="100%" stop-color="#f3eb89" />
-                                </linearGradient>
-                                <path d="M36.25 94.877c-.006-.006-.006-.006 0 0l-2.112-2.112-2.106 2.106-.006.006L.873 126.024a2.985 2.985 0 000 4.219 2.985 2.985 0 004.219 0l26.063-26.057v52.556a2.984 2.984 0 005.966 0v-52.556l26.063 26.057a2.971 2.971 0 002.112.871c.764 0 1.528-.292 2.112-.871a2.985 2.985 0 000-4.219L36.25 94.877zM125.455 70.574a2.995 2.995 0 004.224 0 2.985 2.985 0 000-4.219L98.526 35.209l-.006-.006-2.106-2.106-2.106 2.106-.006.006-31.153 31.147a2.985 2.985 0 000 4.219 2.985 2.985 0 004.219 0l26.057-26.057v112.225a2.984 2.984 0 005.966 0V44.517l26.064 26.057zM191.944 126.024l-31.153-31.147-.006-.006-2.106-2.106-2.106 2.106-.006.006-31.153 31.147a2.985 2.985 0 000 4.219 2.985 2.985 0 004.219 0l26.063-26.057v52.556a2.984 2.984 0 005.966 0v-52.556l26.063 26.057a2.971 2.971 0 002.112.871c.764 0 1.528-.292 2.112-.871a2.98 2.98 0 00-.005-4.219z"/></g></svg>
-                        </div>
-                    </div>
-                    <button class="description__button btn">Zapytaj o dostępność</button>
-                    <div class="description__information--down">
-                        <p class="f-w700 description__title">Listwy podłogowe</p>
-                        <p>W naszej ofercie znajdziecie Państwo dwa rodzaje listew, wykonanych z drewna sosnowego, wykończonego najwyższej jakości okleiną naturalną - lakierowaną lub olejowaną. Każdą z tych listew możemy przygotować dla Państwa w kolorze wybranej podłogi.</p>
-                    </div>
-                </div>
-            </div>
-       </article> 
-       <section>
-           <div class="products container">
-            <div class="products__header">
-                <h3>Podobne produkty</h3>
-            </div>
-            <div class="products__container">
-                <div class="products__item" style="background-image: url(assets/texture-background.jpg);">
-                    <p class="products__name">Dąb Profi Olej Beige</p>
-                </div>
-                <div class="products__item" style="background-image: url(assets/pine-wood-texture.jpg);">
-                    <p class="products__name">Dąb Herringbone  Olej</p>
-                </div>
-                <div class="products__item" style="background-image: url(assets/2145.jpg);">
-                    <p class="products__name">Dąb Czerwony Profi Olej</p>
-                </div>
-            </div>
+               </div>
            </div>
-        </section>
+       </article>
     </main>
     <footer id="footer">
         <div class="footer">

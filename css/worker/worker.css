@@ -1,0 +1,239 @@
+.worker__elements {
+    display: flex;
+    justify-content: space-between;
+}
+
+.worker__text {
+    width: 70%;
+}
+
+.worker__info {
+    display: flex;
+    justify-content: center;
+}
+
+.worker__info > svg {
+    margin-right: 5px;
+    fill: url(#my-cool-gradient);
+}
+
+.worker__info > p {
+    margin: 0;
+}
+
+.worker__form {
+    display: grid;
+    width: 100%;
+    gap: 10vh;
+    margin-top: 15vh;
+}
+
+.worker__wrapper {
+    width: 100%;
+    padding: 5vh;
+    box-shadow: 0 0 50px rgba(0,0,0,0.2);
+}
+
+.worker__input {
+    display: grid;
+    gap: 3vh 6vw;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin: 0 auto;
+}
+
+::-webkit-input-placeholder { 
+    color: black;
+    font-weight: 600;
+    font-size: .8rem;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 14px;
+}
+
+.worker__input input,
+.worker__input textarea,
+.worker__input--attachment {
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 2px #ebebeb;
+    grid-column: 1 / -1;
+}
+
+.worker__input input {
+    grid-column: initial;
+}
+
+/* Załącznik */
+
+input[type=file] {
+    padding: 0;
+    position: relative;
+    border: 0;
+    margin-left: auto;
+    width: 85%;
+}
+
+input[type="file"]::after {
+    content: 'Załącz CV';
+    color: black;
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.worker__input--attachment {
+    position: relative;
+    padding: 0;
+    color: black;
+    font-weight: 600;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.worker__input--attachment > p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px;
+    padding-bottom: 0;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    padding: 10px 25px;
+    background-color: #ebebeb;
+    border: none;
+    display: inline-block;
+    border-radius: 5px;
+    /* color: var(--bg-color-black); */
+    color: transparent;
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 600;
+    box-shadow: 0;
+    outline: none;
+    font-size: 14px;
+}
+
+/* Textarea */
+
+.worker__input textarea {
+    resize: none;
+}
+
+/* Checkbox */
+
+.worker__input--checkbox {
+    grid-column: 1 / -1;
+    padding: 2vh 0;
+    user-select: none;
+    display: flex;
+    align-items: center;
+}
+
+input[type=checkbox] {
+    display: none;
+    appearance: none;
+}
+
+input[type=checkbox] {
+    background-color: #ebebeb;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+input[type=checkbox] + label {
+    position: relative;
+    cursor: pointer;
+    margin-left: 11px;
+}
+
+input[type=checkbox]:checked + label:after {
+    content: '\2714';
+    height: 1em;
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%);
+    margin: auto;
+    color: black;
+    line-height: 1;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Buttony */
+
+.worker__button {
+    justify-self: center;
+}
+
+.worker__back {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 10vh;
+}
+
+.worker__back > a {
+    color: var(--bg-color-black);
+    font-size: 1rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .worker__elements {
+        flex-direction: column-reverse;
+        align-items: start;
+    }
+
+    .worker__text {
+        width: 100%;
+    }
+
+    .worker__info {
+        margin-bottom: 3vh;
+    }
+
+    .worker__input {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .worker__wrapper {
+        padding: 2.5vh;
+    }
+
+    .worker__input--attachment {
+        width: 100%;
+        justify-content: start;
+        justify-items: start;
+        font-size: 10px;
+    }
+
+    input[type="file"] {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .worker__input--attachment > p {
+        display: none;
+    }
+
+    input[type="file"]::after {
+        left: 28%;
+        font-size: 14px;
+    }
+}
