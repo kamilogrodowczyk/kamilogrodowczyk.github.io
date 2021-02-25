@@ -57,6 +57,7 @@
     border-radius: 5px;
     border: solid 2px #ebebeb;
     grid-column: 1 / -1;
+    width: 100%;
 }
 
 .worker__input input {
@@ -134,6 +135,14 @@ input[type="file"]::-webkit-file-upload-button {
     user-select: none;
     display: flex;
     align-items: center;
+    position: relative;
+    justify-self: start;
+}
+
+.worker__input--checkbox > span {
+    position: absolute;
+    left: 0;
+    top: 75%;
 }
 
 input[type=checkbox] {
@@ -150,13 +159,16 @@ input[type=checkbox] {
     border-radius: 0;
 }
 
-input[type=checkbox] + label {
-    position: relative;
+input[type=checkbox] ~ label {
     cursor: pointer;
     margin-left: 11px;
 }
 
-input[type=checkbox]:checked + label:after {
+.worker__input--checkbox > label {
+    position: relative;
+}
+
+input[type=checkbox]:checked ~ label:after {
     content: '\2714';
     height: 1em;
     position: absolute;
@@ -168,6 +180,28 @@ input[type=checkbox]:checked + label:after {
     line-height: 1;
     font-size: 18px;
     text-align: center;
+}
+
+.worker__input--button {
+    border: none;
+    display: inline-block;
+    color: var(--bg-color-black);
+    white-space: nowrap;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 600;
+    background-color: transparent;
+    outline: none;
+}
+
+.worker__agreement {
+    grid-column: 1 / -1;
+    display: none;
+}
+
+.worker__agreement--active {
+    display: block;
 }
 
 /* Buttony */
@@ -188,6 +222,28 @@ input[type=checkbox]:checked + label:after {
     font-size: 1rem;
     text-align: center;
 }
+
+/* input:invalid{
+    border-color: #900;
+  }
+  
+  input:focus:invalid {
+    outline: none;
+  } */
+  
+  /* This is the style of our error messages */
+  .error {
+    width: 100%;
+    padding: 0;  
+    font-size: 12px;
+    color: #900;
+    border-radius: 0 0 5px 5px;  
+    box-sizing: border-box;
+  }
+  
+  .error.active {
+    padding: 5px;
+  }
 
 @media screen and (max-width: 1024px) {
 

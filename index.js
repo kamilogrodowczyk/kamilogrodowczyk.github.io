@@ -4,6 +4,7 @@ import observerCounter from './modules/observerCounter.js';
 import stickyHeader from './modules/stickyHeader.js';
 import mobileScreen from './modules/mobileScreen.js';
 import carousel from './modules/carousel.js';
+import validationForm from './modules/validationForm.js';
 
 function init() {
 	// mobileScreen();
@@ -12,6 +13,7 @@ function init() {
 	observerAnimation();
 	observerCounter();
 	stickyHeader();
+	validationForm();
 }
 
 window.addEventListener('load', init);

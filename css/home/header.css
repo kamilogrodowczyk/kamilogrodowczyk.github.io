@@ -336,7 +336,7 @@
     } */
 
     .header__arrow-text::after {
-        content: url('../assets/right-arrow.svg');
+        content: url('../../assets/right-arrow.svg');
         display: inline-block;
         position: absolute;
         left: 107%;
