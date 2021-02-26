@@ -22,6 +22,10 @@
     margin: 0;
 }
 
+.header__title::after {
+    content: 'do pobrania' / 'do pobrania';
+}
+
 @media screen and (max-width: 768px) {
 
     .header__container {

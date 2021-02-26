@@ -157,6 +157,12 @@
     background-color: #f2f2f2;
     border-radius: 50%;
     position: relative;
+    transition: background-color .2s ease-in-out;
+}
+
+.numbers__image:hover > .numbers__image--grey {
+    background-color: #e2e2e2;
+    transition: background-color .3s ease-in-out;
 }
 
 .numbers__image--grey > svg {

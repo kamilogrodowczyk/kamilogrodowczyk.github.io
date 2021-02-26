@@ -58,6 +58,11 @@
             </nav>
             <section id="myCarousel" aria-roledescription="carousel" aria-label="Podłogi firmy Dąbex">
                 <div class="header__container" role="group" id="myCarousel-items" aria-roledescription="slide" aria-label="1 of 3" style="background-image: url(assets/slide1.jpg);">
+                    <div class="header__dots">
+                        <button class="header__dot header__dot--active" aria-controls="myCarousel-items" aria-label="1"></button>
+                        <button class="header__dot" aria-controls="myCarousel-items" aria-label="2"></button>
+                        <button class="header__dot" aria-controls="myCarousel-items" aria-label="3"></button>
+                    </div>
                     <div class="header__text animate">
                         <h1 class="header__title">Lorem</h1>
                         <h3 class="header__paragraph">Lorem ipsum dolor sit amet.</h3>
@@ -70,11 +75,6 @@
                 </div>
             </section>
             <div class="header__arrow">
-                <div class="header__dots">
-                    <div class="header__dot header__dot--active" aria-controls="myCarousel-items" aria-label="1"></div>
-                    <div class="header__dot" aria-controls="myCarousel-items" aria-label="2"></div>
-                    <div class="header__dot" aria-controls="myCarousel-items" aria-label="3"></div>
-                </div>
                 <p class="header__arrow-text">Pokaż wszystkie nasze lokalizacje</p>                    
             </div>
             <div class="header__accent"></div>
@@ -93,7 +93,7 @@
                 <div class="collection__left" style="background-image: url(assets/ddp-kS1UuxzkuJE-unsplash.jpg);"></div>
                 <div class="collection__text animate">                    
                     <h3><div class="p">Nasze podłogi</div>z innej perspektywy</h3>
-                    <button class="collection__button btn">Zobacz</button>
+                    <button class="collection__button btn" aria-label="Zobacz nasze podłogi">Zobacz</button>
                 </div>
                 <div class="collection__right" style="background-image: url(assets/ddp-kS1UuxzkuJE-unsplash_kopia.jpg);"></div>                    
         </section>
@@ -181,7 +181,7 @@
                                     <div class="numbers__circle--left animate"></div>
                                 </div>
                                 <div class="numbers__text">
-                                    <div class="numbers__result h3" data-target="29">0</div>
+                                    <div class="numbers__result h3" data-target="29" role="text">0</div>
                                     <p>lat na rynku</p>
                                 </div>
                             </div>
@@ -242,12 +242,11 @@
                     <div class="rubra__image--left" style="background-image: url(assets/rubra-left.jpg);"></div>
                     <div class="rubra__image--right" style="background-image: url(assets/rubra-right.jpg);">
                         <div class="rubra__text">
-                            <p>Rudra to kolejny owoc</p>
-                            <p>naszej filozofii tworzenia</p>
+                            <p>Rudra to kolejny owoc <br aria-hidden="true"/>naszej filozofii tworzenia</p>                           
                         </div>
                     </div>
                 </div>
-                <button class="rubra__button btn">Zobacz</button>
+                <button class="rubra__button btn" aria-label="Zobacz Rubra Collection">Zobacz</button>
             </div>
         </section>
         <section>

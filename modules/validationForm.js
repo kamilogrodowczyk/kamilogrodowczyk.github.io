@@ -1,8 +1,8 @@
 export default function validationForm() {
     const form = document.querySelector('.worker__form');
-    const inputs = form.querySelectorAll('input[required]');
-    const agreement = form.querySelector('.worker__agreement');
-    const button = form.querySelector('.worker__input--button');
+    const inputs = document.querySelectorAll('input[required]');
+    const agreement = document.querySelector('.worker__agreement');
+    const button = document.querySelector('.worker__input--button');
 
     function validate() {
         const elem = this;
@@ -43,7 +43,11 @@ export default function validationForm() {
         agreement.setAttribute('aria-hidden', !flag);
     }
 
-    inputs.forEach(input => input.addEventListener('input', validate))
-    button.addEventListener('click', handleClick);
-    form.addEventListener('submit', submit)
+    inputs.forEach(input => input.addEventListener('input', validate));
+    if(form) {
+        form.addEventListener('submit', submit);
+    }
+    if(button) {
+        button.addEventListener('click', handleClick);
+    }
 }

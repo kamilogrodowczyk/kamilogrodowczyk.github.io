@@ -22,6 +22,10 @@
     margin: 0;
 }
 
+.header__title::after {
+    content: 'pracy' / 'pracy';
+}
+
 @media screen and (max-width: 768px) {
 
     .header__container {

@@ -60,7 +60,7 @@
 
 .trade__contact--number::before,
 .trade__contact--mail::before {
-    content: url('../../assets/phone-ringing.svg');
+    content: url('../../assets/phone-ringing.svg') / 'telefon';
     position: absolute;
     left: -40px;
     top: 0;
@@ -69,7 +69,7 @@
 }
 
 .trade__contact--mail::before {
-    content: url('../../assets/mail.svg');
+    content: url('../../assets/mail.svg') / 'mail';
 }
 
 @media screen and (max-width: 1024px) {

@@ -30,7 +30,6 @@ body {
 h1 {
     /* font-size: 3.052rem; */
     font-size: clamp(3.052rem, -6.104rem + 7.3248vw, 7.63rem);
-    line-height: 1.1;
 }
 h2 {
     /* font-size: 2.441rem; */
