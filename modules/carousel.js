@@ -4,7 +4,7 @@ export default function carousel() {
 
     function handleClick() {        
         const target = this.getAttribute('aria-label')
-        const images = ['url(assets/slider.jpg)', 'url(assets/slide1.jpg)', 'url(assets/slide2.jpg)', 'url(assets/slide3.jpg)'];
+        const images = ['url(assets/slide1.jpg)', 'url(assets/slide2.jpg)', 'url(assets/slide3.jpg)'];
 
         header.style.backgroundImage = images[target-1];
         header.setAttribute('aria-label', `${target} of 4`);
