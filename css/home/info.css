@@ -151,6 +151,23 @@
     cursor: pointer;
 }
 
+.numbers__image--grey {
+    height: 130px;
+    width: 128px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    position: relative;
+}
+
+.numbers__image--grey > svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 60%;
+    width: 60%;
+}
+
 .numbers__image:hover > img {
     filter: brightness(90%);
     transition: filter .3s ease-in-out;

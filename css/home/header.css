@@ -259,11 +259,11 @@
     background-color: grey;
     margin-right: 25px;
     cursor: pointer;
-    position: relative;
 }
 
 .header__dot--active {
     background-color: black;
+    position: relative;
 }
 
 .header__dot--active.header__dot {
