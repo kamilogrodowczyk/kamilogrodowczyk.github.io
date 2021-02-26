@@ -11,6 +11,7 @@ export default function observerCounter() {
             if(!entry.isIntersecting) {
                 return;
             }
+            upFirst()
             up()
             observer.unobserve(entry.target)
         })
@@ -19,8 +20,9 @@ export default function observerCounter() {
     circle.forEach(element => observerCircle.observe(element))
 }
 
-const counter = document.querySelectorAll('.numbers__result');
-const speed = 200;
+const counter = document.querySelectorAll('.numbers__result1');
+const first = document.querySelectorAll('.numbers__result');
+const speed = 500;
 
 function up() {
 
@@ -33,6 +35,26 @@ function up() {
             if(count < target) {
                 counter.innerText = Math.ceil(count + inc);
                 setTimeout(updateCount, 1)
+            } else {
+                counter.innerText = target;
+            }
+        }
+        updateCount();
+    })
+}
+
+const speedFirst = 5000000;
+function upFirst() {
+
+    first.forEach(counter => {
+        function updateCount() {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText
+            const inc = target / speedFirst;
+            
+            if(count < target) {
+                counter.innerText = Math.ceil(count + inc);
+                setTimeout(updateCount, 100)
             } else {
                 counter.innerText = target;
             }

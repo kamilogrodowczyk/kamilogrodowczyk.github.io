@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' media='screen' href='css/home/style.css'> 
+    <link rel="icon" type="image/jpg" href="assets/favicon.jpg"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -56,19 +57,26 @@
                 </div>
             </nav>
             <section id="myCarousel" aria-roledescription="carousel" aria-label="Podłogi firmy Dąbex">
-                <div class="header__container" role="group" id="myCarousel-items" aria-roledescription="slide" aria-label="1 of 3" style="background-image: url(assets/slider.jpg);">
+                <div class="header__container" role="group" id="myCarousel-items" aria-roledescription="slide" aria-label="1 of 4" style="background-image: url(assets/slider.jpg);">
                     <div class="header__text animate">
                         <h1 class="header__title">Lorem</h1>
                         <h3 class="header__paragraph">Lorem ipsum dolor sit amet.</h3>
                     </div>
                     <div class="header__images animate">
-                        <div role="button" class="header__button" aria-controls="myCarousel-items" aria-label="1"><img class="header__image" src="assets/lodz.jpg" alt="podłogi-łódź"></div>
-                        <div role="button" class="header__button" aria-controls="myCarousel-items" aria-label="2"><img class="header__image" src="assets/poznan.jpg" alt="podłogi-poznań"></div>
-                        <div role="button" class="header__button" aria-controls="myCarousel-items" aria-label="3"><img class="header__image" src="assets/szczecin.jpg" alt="podłogi-szczecin"></div>
+                        <div class="header__button" aria-controls="myCarousel-items" aria-label="1"><img class="header__image" src="assets/lodz.jpg" alt="podłogi-łódź"></div>
+                        <div class="header__button" aria-controls="myCarousel-items" aria-label="2"><img class="header__image" src="assets/poznan.jpg" alt="podłogi-poznań"></div>
+                        <div class="header__button" aria-controls="myCarousel-items" aria-label="3"><img class="header__image" src="assets/szczecin.jpg" alt="podłogi-szczecin"></div>
                     </div>
                 </div>
             </section>
             <div class="header__arrow">
+                <div class="header__dots">
+                    <div class="header__dot header__dot--active" aria-label="1"></div>
+                    <div class="header__dot" aria-label="2"></div>
+                    <div class="header__dot" aria-label="3"></div>
+                    <div class="header__dot" aria-label="4"></div>
+                    <div class="header__dot" style="opacity: 0;" aria-label="4"></div>
+                </div>
                 <p class="header__arrow-text">Pokaż wszystkie nasze lokalizacje</p>                    
             </div>
             <div class="header__accent"></div>
@@ -166,11 +174,6 @@
                 </section>
                 <section>
                     <div class="numbers">
-                        <header>
-                            <div class="numbers__header">                                
-                                <h3><div class="p">Dąbex</div>w liczbach</h3>
-                            </div>
-                        </header>
                         <div class="numbers__container container" style="background-image: url(assets/mountain-slopes-forest-hills-morning-fog_kopia_2.jpg);">
                             <div class="numbers__element">
                                 <div class="numbers__image numbers__image--left animate">
@@ -188,7 +191,7 @@
                                     <div class="numbers__circle--middle animate"></div>
                                 </div>
                                 <div class="numbers__text">
-                                    <div class="numbers__result h3" data-target="10000">0</div>
+                                    <div class="numbers__result1 h3" data-target="10000">0</div>
                                     <p>drzew posadziliśmy</p>
                                 </div>
                             </div>
@@ -198,7 +201,7 @@
                                     <div class="numbers__circle--right animate"></div>
                                 </div>
                                 <div class="numbers__text">
-                                    <div class="numbers__result h3" data-target="1245">0</div>
+                                    <div class="numbers__result1 h3" data-target="1245">0</div>
                                     <p>zadowolonych klientów</p>
                                 </div>
                             </div>

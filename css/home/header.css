@@ -190,7 +190,7 @@
 .header__text.animated {
     transform: translateX(0);
     opacity: 1;
-    transition: transform 2s .2s ease-in-out, opacity 2s .2s ease-in-out;
+    transition: transform .5s 0s ease-in-out, opacity .5s 0s ease-in-out;
 }
 
 .header__title {
@@ -216,7 +216,7 @@
 .header__images.animated {
     transform: translateY(0);
     opacity: 1;
-    transition: transform 2s .2s ease-in-out, opacity 2s .2s ease-in-out;
+    transition: transform .5s 0s ease-in-out, opacity .5s 0s ease-in-out;
 }
 
 .header__image {
@@ -237,12 +237,50 @@
     height: 15%;
     align-items: start;
     width: 80%;
-    justify-content: center;
+    justify-content: start;
     padding-right: 10%;
 }
 
 .header__arrow-text {
     position: relative;
+    justify-content: center;
+}
+
+.header__dots {
+    display: flex;
+    margin-right: 20%;
+    align-items: center;
+}
+
+.header__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: grey;
+    margin-right: 25px;
+    cursor: pointer;
+    position: relative;
+}
+
+.header__dot--active {
+    background-color: black;
+}
+
+.header__dot--active.header__dot {
+    width: 20px;
+    height: 20px;   
+}
+
+.header__dot--active.header__dot::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: solid 2px black;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
 }
 
 .header__arrow-text::after {
@@ -263,6 +301,16 @@
     right: 0;
     height: 25vh;
     z-index: -1;
+}
+
+@media screen and (max-width: 1200px) {
+    .header__arrow {
+        flex-direction: column;
+    }
+
+    .header__arrow-text {
+        margin-top: 20px;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -331,10 +379,6 @@
         align-content: space-between;
     }
 
-    /* .header__image {
-        height: 100%;
-    } */
-
     .header__arrow-text::after {
         content: url('../../assets/right-arrow.svg');
         display: inline-block;
@@ -344,5 +388,14 @@
         width: 35px;
         --rotate: -90deg;
         animation: arrow-right 2s ease-in-out infinite;
+    }
+
+    .header__arrow--text {
+        align-self: center;
+    }
+
+    .header__dots {
+        align-self: center;
+        margin: 0;
     }
 }
