@@ -7,7 +7,7 @@ import carousel from './modules/carousel.js';
 import validationForm from './modules/validationForm.js';
 
 function init() {
-	// mobileScreen();
+	mobileScreen();
 	carousel();
 	hamburgerMenu();
 	observerAnimation();

@@ -3,6 +3,8 @@ export default function validationForm() {
     const inputs = document.querySelectorAll('input[required]');
     const agreement = document.querySelector('.worker__agreement');
     const button = document.querySelector('.worker__input--button');
+    const buttonSubmit = document.querySelector('.worker__button');
+    form.setAttribute('novalidate', true)
 
     function validate() {
         const elem = this;
@@ -19,6 +21,51 @@ export default function validationForm() {
             if(!input.validity.valid) {
                 showError(input);
                 e.preventDefault();
+            } else {
+                const formData  = new FormData(form);
+                const url = form.getAttribute('action');
+                const method = form.getAttribute('method');
+                console.log(url, method);
+                fetch(url, {
+                    method: method,
+                    body: formData
+                })
+                .then(res => res.json())
+                .then(res => {
+                    if (res.errors) { //błędne pola
+                        const selectors = res.errors.map(el => `[name="${el}"]`);
+                        const fieldsWithErrors = form.querySelectorAll(selectors.join(","));
+                        for (const el of fieldsWithErrors) {
+                            showError(el);
+                        }
+                    } else { //pola są ok - sprawdzamy status wysyłki
+                        if (res.status === "ok") {
+                            //wyświetlamy komunikat powodzenia, cieszymy sie
+                            const div = document.createElement("div");
+                            div.classList.add("form-send-success");
+                            div.innerText = "Wysłanie wiadomości się powiodło";
+
+                            form.parentElement.insertBefore(div, form);
+                            div.innerHTML = `
+                                <strong>Wiadomość została wysłana</strong>
+                                <span>Dziękujemy za kontakt. Postaramy się odpowiedzieć jak najszybciej</span>
+                            `;
+                            form.remove();
+                        }
+                        if (res.status === "error") {
+                            //komunikat błędu, niepowodzenia
+                            const statusError = document.querySelector('.send-error');
+                            if(statusError) {
+                                statusError.remove();
+                            }
+
+                            const div = document.createElement('div');
+                            div.classList.add('send-error');
+                            div.innerText = "Wysłanie wiadomości nie powiodło się";
+                            buttonSubmit.parentElement.appendChild(div);
+                        }
+                    }
+                });
             }
         })
     }
