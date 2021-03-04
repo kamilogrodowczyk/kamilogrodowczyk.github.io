@@ -1,0 +1,91 @@
+.headquarters {
+    position: relative;
+    width: 100%;
+}
+
+.headquarters__container {
+    width: 87.5vw;
+    display: flex;
+}
+
+.headquarters__image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex: 1.7;
+    margin-right: 5vw;
+}
+
+.headquarters__text {
+    flex: 1;
+    display: grid;
+    gap: 10vh;
+    justify-items: flex-start;
+}
+
+.headquarters__title {
+    position: relative;
+    background-color: var(--bg-color-white);
+    padding: 15px;
+}
+
+.headquarters__title::after {
+    content: 'Dąbex' / 'Dąbex';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: clamp(1.953rem, -1.953rem + 3.1248vw, 3.1248rem);
+    background-color: transparent;
+    color: var(--bg-color-white);
+    padding: 10px 15px;
+}
+
+.headquarters__paragraph {
+    color: var(--bg-color-white);
+}
+
+.headquarters__button.btn {
+    background-image: linear-gradient(#d7a950 0%, #f3eb89 100%);
+    color: var(--bg-color-black);
+    transition: background-image .1s ease-in-out, background-position .1s ease-in-out;
+    background-size: 1px 200px;
+    margin-bottom: 10vh;
+}
+
+.headquarters__button.btn:hover {
+    background-position:200px;
+    box-shadow: none;
+    transition: background-image .2s ease-in-out, background-position .1s ease-in-out;
+}
+
+.headquarters__accent {
+    position: absolute;
+    bottom: -10%;
+    right: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    width: 7vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+
+    .headquarters__container {
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+    .headquarters__image {
+        display: none;
+    }
+
+    .headquarters__button.btn {
+        margin-bottom: 0;
+    }
+
+    .headquarters__accent {
+        display: none;
+    }
+}

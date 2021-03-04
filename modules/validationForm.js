@@ -4,7 +4,9 @@ export default function validationForm() {
     const agreement = document.querySelector('.worker__agreement');
     const button = document.querySelector('.worker__input--button');
     const buttonSubmit = document.querySelector('.worker__button');
-    form.setAttribute('novalidate', true)
+    if(form) {
+        form.setAttribute('novalidate', true)
+    }
 
     function validate() {
         const elem = this;
@@ -21,12 +23,15 @@ export default function validationForm() {
             if(!input.validity.valid) {
                 showError(input);
                 e.preventDefault();
-            } else {
-                const formData  = new FormData(form);
+            }
+        })
+
+        const formData  = new FormData(form);
                 const url = form.getAttribute('action');
                 const method = form.getAttribute('method');
                 console.log(url, method);
                 fetch(url, {
+                    mode: 'no-cors',
                     method: method,
                     body: formData
                 })
@@ -66,8 +71,6 @@ export default function validationForm() {
                         }
                     }
                 });
-            }
-        })
     }
 
     function showError(elem) {

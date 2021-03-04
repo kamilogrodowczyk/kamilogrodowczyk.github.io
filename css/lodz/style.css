@@ -1,0 +1,10 @@
+@import url("header.css");
+@import url("details.css");
+@import url("features.css");
+@import url("realisation.css");
+@import url("location.css");
+@import url("footer.css");
+
+body {
+    background-color: #222;
+}

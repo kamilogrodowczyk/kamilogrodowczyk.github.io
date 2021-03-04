@@ -27,7 +27,7 @@ body {
     height: 100%;
 }
 
-h1 {
+h1, .h1 {
     /* font-size: 3.052rem; */
     font-size: clamp(3.052rem, -6.104rem + 7.3248vw, 7.63rem);
 }
@@ -93,12 +93,20 @@ svg {
     margin: 0 auto;
 }
 
+.m-0-5 {
+    margin: 5vh 0;
+}
+
 .m-1 {
     margin: 10vh 0;
 }
 
 .m-2 {
     margin: 15vh 0;
+}
+
+.m-y1-5 {
+    margin-top: 15vh;
 }
 
 .m-y1 {

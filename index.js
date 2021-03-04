@@ -9,11 +9,11 @@ import validationForm from './modules/validationForm.js';
 function init() {
 	mobileScreen();
 	carousel();
-	hamburgerMenu();
-	observerAnimation();
+	hamburgerMenu();	
 	observerCounter();
 	stickyHeader();
 	validationForm();
 }
+observerAnimation();
 
 window.addEventListener('load', init);

@@ -1,0 +1,209 @@
+.header {
+    height: 80vh;
+    height: calc(var(--vh, 1vh) * 80);
+}
+
+.header__container {
+    height: 75%;
+    justify-self: flex-start;
+    justify-content: center;
+    display: flex;
+}
+
+.header__text {
+    display: grid;
+    justify-items: flex-start;
+    align-content: center;
+    padding: 0;
+    gap: 15vh;
+    flex: 1;
+}
+
+.header__text > * {
+    margin: 0;
+}
+
+.header__title {
+    position: relative;
+    background-image: linear-gradient(to left, #d7a950 0%, #f3eb89 100%);
+    color: var(--bg-color-black);
+}
+
+.header__title::after {
+    content: 'Dąbex' / 'Dąbex';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: clamp(1.953rem, -1.953rem + 3.1248vw, 3.1248rem);
+    background-color: transparent;
+    color: var(--bg-color-white);
+    padding: 10px 15px;
+}
+
+.header__info {
+    position: relative;
+}
+
+.header__info::after {
+    content: 'Wybierz na mapie salon.';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 10px;
+    white-space: nowrap;
+}
+
+.header__info > svg {
+    fill: var(--bg-color-white);
+}
+
+.header__image {
+    width: 600px;
+    height: 500px;
+    align-self: center;
+    position: relative;
+    flex: 1;
+}
+
+.header__image--map {
+    height: 500px;
+    width: 500px;
+    object-fit: contain;
+}
+
+.header__symbol--szczecin,
+.header__symbol--poznan,
+.header__symbol--lodz {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.header__symbol--szczecin {
+    left: 3%;
+    top: 20%;
+}
+
+.header__symbol--poznan {
+    left: 20%;
+    top: 35%;
+}
+
+.header__symbol--lodz {
+    left: 35%;
+    top: 47%;
+}
+
+.header__symbol--szczecin > p,
+.header__symbol--poznan > p,
+.header__symbol--lodz > p {
+    margin: 0;
+    margin-left: 15px;
+    color: var(--bg-color-white);
+    font-size: .8rem;
+    line-height: 1.4;
+}
+
+.header__hover {
+    display: none;
+}
+
+.header__symbol--szczecin:hover > .header__hover,
+.header__symbol--poznan:hover > .header__hover,
+.header__symbol--lodz:hover > .header__hover {
+    display: block;
+}
+
+.header__symbol--szczecin:hover > .header__symbol--white,
+.header__symbol--poznan:hover > .header__symbol--white,
+.header__symbol--lodz:hover > .header__symbol--white {
+    display: none;
+}
+
+.header__accents {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    right: 0;
+    top: 40%;
+    z-index: -1;
+}
+
+.header__accents > * {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;  
+    height: 50vh;
+    width: 20%;
+}
+
+.header_accent--left {
+    width: 17%;
+}
+
+.header_accent--right {
+    width: 40%;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .header {
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+    }
+
+    .header__container {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .header__image {
+        width: 550px;
+        height: 550px;
+    }
+    
+    .header__image--map {
+        height: 550px;
+        width: 550px;
+    }
+
+    .header__text{
+        gap: 8vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+    }
+
+    .header__image {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .header__image--map {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .header__symbol--white,
+    .header__hover {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .break {
+        display: none;
+    }
+}
