@@ -64,11 +64,22 @@
                 </div>
             </nav>
             <section id="myCarousel" aria-roledescription="carousel" aria-label="Podłogi firmy Dąbex">
-                <div class="header__container" role="group" id="myCarousel-items" aria-roledescription="slide" aria-label="1 of 3" style="background-image: url(assets/slide1.jpg);">
-                    <div class="header__dots">
-                        <button class="header__dot header__dot--active" aria-controls="myCarousel-items" aria-label="1"></button>
-                        <button class="header__dot" aria-controls="myCarousel-items" aria-label="2"></button>
-                        <button class="header__dot" aria-controls="myCarousel-items" aria-label="3"></button>
+                <div class="header__container">
+                    <div class="header__dots" role="tablist">
+                        <button id="carousel-tab-1" class="header__dot header__dot--active" role="tab" tabindex="1" aria-selected="true" aria-controls="carousel-items-1" aria-label="1"></button>
+                        <button id="carousel-tab-2" class="header__dot" aria-selected="false" role="tab" tabindex="1" aria-controls="carousel-items-2" aria-label="2"></button>
+                        <button id="carousel-tab-3" class="header__dot" aria-selected="false" role="tab" tabindex="1" aria-controls="carousel-items-3" aria-label="3"></button>
+                    </div>
+                    <div class="header__hero">
+                        <div id="carousel-items-1" class="header__hero--image header__hero--active" aria-label="1 z 3" aria-roledescription="slide">
+                            <img src="assets/slide1.jpg" alt="Zdjęcie numer 1">
+                        </div>
+                        <div id="carousel-items-2" class="header__hero--image" aria-label="2 z 3" aria-roledescription="slide">
+                            <img src="assets/slide2.jpg" alt="Zdjęcie numer 2">
+                        </div>
+                        <div id="carousel-items-3" class="header__hero--image" aria-label="3 z 3" aria-roledescription="slide">
+                            <img src="assets/slide3.JPG" alt="Zdjęcie numer 3">
+                        </div>
                     </div>
                     <div class="header__text animate">
                         <h1 class="header__title">Lorem</h1>

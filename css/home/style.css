@@ -152,6 +152,17 @@ svg {
     transition: background-color .3s ease-in-out, color .3s ease-in-out, box-shadow .2s .1s ease-in-out;
 }
 
+.sr-only {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
 @media screen and (max-width: 768px) {
     html {
         font-size: 14px;

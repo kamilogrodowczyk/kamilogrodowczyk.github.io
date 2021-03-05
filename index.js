@@ -8,12 +8,12 @@ import validationForm from './modules/validationForm.js';
 
 function init() {
 	mobileScreen();
-	carousel();
-	hamburgerMenu();	
+	carousel();	
 	observerCounter();
 	stickyHeader();
 	validationForm();
 }
 observerAnimation();
+hamburgerMenu();
 
 window.addEventListener('load', init);

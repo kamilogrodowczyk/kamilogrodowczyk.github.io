@@ -163,9 +163,6 @@
 }
 
 .header__container {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     width: 100%;
     height: 100%;
     justify-self: flex-start;
@@ -173,6 +170,33 @@
     position: relative;
     display: flex;
     transition: background-image .5s ease-in-out;
+}
+
+.header__hero {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.header__hero--image.header__hero--active {
+    z-index: 1;
+    display: block;
+}
+
+.header__hero--image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: inherit;
+    display: none;
+}
+
+.header__hero--image > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .header__dots {
@@ -228,6 +252,8 @@
     transform: translateX(-2.5vw);
     opacity: 0;
     will-change: transform;
+    position: relative;
+    z-index: 2;
 }
 
 .header__text.animated {
@@ -254,6 +280,8 @@
     transform: translateY(-5vh);
     opacity: 0;
     will-change: transform;
+    position: relative;
+    z-index: 2;
 }
 
 .header__images.animated {
