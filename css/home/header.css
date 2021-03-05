@@ -98,7 +98,7 @@
     background-color: var(--bg-color-black);
     top: 0;
     right: 0;
-    z-index: 2;
+    z-index: 99;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -294,12 +294,6 @@
     width: 24vh;
     height: 100%;
     object-fit: cover;
-}
-
-.header__button {
-    border: none;
-    outline: none;
-    cursor: pointer;
 }
 
 .header__arrow {
