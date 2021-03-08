@@ -9,6 +9,9 @@
     justify-self: flex-end;
     justify-content: center;
     display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .header__text {

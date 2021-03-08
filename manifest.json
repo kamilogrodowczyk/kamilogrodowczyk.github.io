@@ -1,0 +1,25 @@
+{
+    "name": "Dąbex - wytwórnia parkietów",
+    "short_name": "Podłogi Dąbex",
+    "start_url": ".",
+    "background_color": "#d7a950",
+    "theme_color": "#222",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "assets/logo-manifest.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/logo2-manifest.png",
+            "sizes": "168x168",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/logo-manifest512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

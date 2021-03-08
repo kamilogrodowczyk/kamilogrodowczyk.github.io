@@ -136,6 +136,7 @@
 
 .nav__image {
     width: 200px;
+    height: 100%;
 }
 
 .nav__link:first-of-type {

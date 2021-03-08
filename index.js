@@ -5,6 +5,7 @@ import stickyHeader from './modules/stickyHeader.js';
 import mobileScreen from './modules/mobileScreen.js';
 import carousel from './modules/carousel.js';
 import validationForm from './modules/validationForm.js';
+import resize from './modules/resizeScreen.js';
 
 function init() {
 	mobileScreen();
@@ -12,6 +13,7 @@ function init() {
 	observerCounter();
 	stickyHeader();
 	validationForm();
+	resize();
 }
 observerAnimation();
 hamburgerMenu();

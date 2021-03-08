@@ -50,6 +50,11 @@
     gap: 1vh;
 }
 
+/* .header__symbol > img {
+    width: 22px;
+    height: 31px;
+} */
+
 .header__symbol--paragraph {
     color: var(--bg-color-white);
     white-space: nowrap;
