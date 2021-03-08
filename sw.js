@@ -1,10 +1,15 @@
-self.addEventListener('install', e => {
-    e.waitUntil(
-        caches.open('static').then(cache => {
-            return cache.addAll(["index.html", "css/home/", "assets/logo-manifest512.png"])
-        })
-    );
-})
+const URLS = [
+    '/kamilogrodowczyk.github.io/',
+    '/kamilogrodowczyk.github.io/index.html'
+]
+
+// self.addEventListener('install', e => {
+//     e.waitUntil(
+//         caches.open('static').then(cache => {
+//             return cache.addAll(["index.html", "css/home/", "assets/logo-manifest512.png"])
+//         })
+//     );
+// })
 
 self.addEventListener('fetch', e => {
     e.respondWith(
@@ -12,4 +17,12 @@ self.addEventListener('fetch', e => {
             return response || fetch(e.request);
         })
     )
+})
+
+self.addEventListener('install', e => {
+    e.waitUntil(
+        caches.open('static').then(cache => {
+            return cache.addAll(URLS)
+        })
+    );
 })
