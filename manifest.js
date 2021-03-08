@@ -1,5 +1,5 @@
 if('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('kamilogrodowczyk.github.io/sw.js', {scope: 'kamilogrodowczyk.github.io'})
+    navigator.serviceWorker.register('./sw.js')
     .then(registration => {
         console.log(registration)
     }).catch(error => {
