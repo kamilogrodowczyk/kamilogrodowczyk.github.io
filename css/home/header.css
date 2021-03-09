@@ -293,7 +293,6 @@
 
 .header__image {
     width: 24vh;
-    height: 100%;
     object-fit: cover;
 }
 

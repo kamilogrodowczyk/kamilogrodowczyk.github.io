@@ -1,0 +1,55 @@
+.promotions {
+    width: 100%;
+}
+
+.promotions__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.promotions__image {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+}
+
+.ecology__info-circle {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    z-index: 7;
+    opacity: 1;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: var(--bg-color-white);
+    border: 8px solid #ebebeb;
+    box-shadow: 0 0 0 4px rgba(250, 250, 250, .9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: center;
+}
+
+.products__container {
+    margin-bottom: 0;
+}
+
+.products {
+    display: grid;
+    gap: 3vw;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .promotions__container {
+        grid-template-columns: 1fr;
+    }
+
+    .promotions__image {
+        height: 40vh;
+    }
+}

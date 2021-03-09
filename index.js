@@ -8,12 +8,12 @@ import validationForm from './modules/validationForm.js';
 import resize from './modules/resizeScreen.js';
 
 function init() {
-	mobileScreen();
 	carousel();	
-	observerCounter();
 	stickyHeader();
-	validationForm();
+	observerCounter();
+	mobileScreen();
 	resize();
+	validationForm();
 }
 observerAnimation();
 hamburgerMenu();

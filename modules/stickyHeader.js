@@ -2,7 +2,8 @@ export default function stickyHeader() {
     function sticky() {
         const navbar = document.querySelector('.nav')
         const header = document.querySelector('.header')
-        if(window.scrollY > header.offsetHeight) {
+        const halfOfHeader = (header.offsetHeight) / 2
+        if(window.scrollY > halfOfHeader) {
             navbar.classList.add('fixed');
             // document.body.style.paddingTop = `${navbar.offsetHeight}`;
         } else {

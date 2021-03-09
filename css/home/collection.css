@@ -37,7 +37,8 @@
 .collection__text.animated::after {
     transform: translate(-1%, -50%) rotate(1deg);
     opacity: 1;
-    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    will-change: transform;
 }
 
 .collection__text {
