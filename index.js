@@ -6,6 +6,7 @@ import mobileScreen from './modules/mobileScreen.js';
 import carousel from './modules/carousel.js';
 import validationForm from './modules/validationForm.js';
 import resize from './modules/resizeScreen.js';
+import zoomPhoto from './modules/zoomPhoto.js';
 
 function init() {
 	carousel();	
@@ -14,6 +15,7 @@ function init() {
 	mobileScreen();
 	resize();
 	validationForm();
+	zoomPhoto();
 }
 observerAnimation();
 hamburgerMenu();
