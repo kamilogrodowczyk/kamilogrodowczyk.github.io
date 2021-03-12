@@ -23,11 +23,11 @@
     transition: opacity .2s ease-in-out;
 }
 
-/* .realisation__images > *:hover:not(.realisation__black) {
+.realisation__images > *:hover:not(.realisation__black) {
     opacity: .8;
     transition: opacity .2s ease-in-out;
     cursor: pointer;
-} */
+}
 
 .realisation__image,
 .realisation__image--big {
@@ -43,20 +43,32 @@
 }
 
 .realisation__black {
-    background-color: var(--bg-color-black);
+    background-color: var(--bg-color-white);
     width: 100%;
     height: 100%;
     position: relative;
+    transition: background-color .2s ease-in-out;
+}
+
+.realisation__images:hover > .realisation__black {
+    background-color: var(--bg-color-black); 
+    transition: background-color .2s ease-in-out;
+}
+
+.realisation__images:hover > .realisation__black > .realisation__info {
+    color: var(--bg-color-white);
+    transition: color .2s ease-in-out;
 }
 
 .realisation__info {
     position: absolute;
     left: 15%;
     top: 20%;
-    color: var(--bg-color-white);
+    color: var(--bg-color-black);
     display:block;
     clear: both;
     user-select: none;
+    transition: color .2s ease-in-out;
 }
 
 .realisation__info::after {

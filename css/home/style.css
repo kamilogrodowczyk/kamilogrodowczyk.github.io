@@ -19,6 +19,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -29,16 +30,13 @@ body {
 }
 
 h1, .h1 {
-    /* font-size: 3.052rem; */
     font-size: clamp(3.052rem, -6.104rem + 7.3248vw, 7.63rem);
 }
 h2 {
-    /* font-size: 2.441rem; */
     font-size: clamp(2.441rem, -4.882rem + 5.8584vw, 6.1025rem);
     line-height: 1.2;
 }
 h3, .h3 {
-    /* font-size: 1.953rem; */
     font-size: clamp(1.953rem, -1.953rem + 3.1248vw, 3.1248rem);
     line-height: 1.4;
     margin-bottom: 3vh;
@@ -133,7 +131,6 @@ svg {
     box-shadow: 0;
     outline: none;
     transition: background-color .2s ease-in-out, color .2s ease-in-out, box-shadow .1s .05s ease-in-out;
-    /* font-size: clamp(1rem, -0.5rem + 0.8vw, 1.5rem); */
 }
 
 *:focus {
