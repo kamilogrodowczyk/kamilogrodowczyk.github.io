@@ -1,5 +1,11 @@
-// const cacheName = 'dabexPWA-v1';
+// const cacheName = 'dabexPWA-v2';
+// const cacheAssets = [
+//     '/index.html',
+//     '/css/home/style.css',
+//     '/index.js'
+// ]
 
+// // cacheAssets.push('/modules/zoomPhoto.js');
 
 // self.addEventListener('install', e => {
 //     e.waitUntil((async () => {
@@ -19,14 +25,14 @@
 //     })());
 // })
 
-// caches.delete(cacheName);
+// caches.delete('dabexPWA-v1');
 
-// self.addEventListener('activate', (e) => {
-//     e.waitUntil((async () => {
-//       const keyList = await caches.keys();
-//       await Promise.all(keyList.map((key) => {
-//         if (key === cacheName) { return; }
-//         await caches.delete(key);
-//       }))
-//     })());
-//   });
+// // self.addEventListener('activate', (e) => {
+// //     e.waitUntil((async () => {
+// //       const keyList = await caches.keys();
+// //       await Promise.all(keyList.map((key) => {
+// //         if (key === cacheName) { return; }
+// //         await caches.delete(key);
+// //       }))
+// //     })());
+// //   });

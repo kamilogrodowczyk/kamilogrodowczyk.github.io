@@ -14,9 +14,9 @@ function init() {
 	observerCounter();
 	mobileScreen();
 	resize();
-	validationForm();
 	zoomPhoto();
 }
+validationForm();
 observerAnimation();
 hamburgerMenu();
 

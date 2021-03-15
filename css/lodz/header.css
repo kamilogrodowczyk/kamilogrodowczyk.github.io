@@ -50,11 +50,6 @@
     gap: 1vh;
 }
 
-/* .header__symbol > img {
-    width: 22px;
-    height: 31px;
-} */
-
 .header__symbol--paragraph {
     color: var(--bg-color-white);
     white-space: nowrap;
@@ -102,5 +97,13 @@
         width: 100%;
         height: 100%;
         object-fit: contain;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header__text {
+        width: 90%;
+        height: 100%;
+        align-content: center;
     }
 }

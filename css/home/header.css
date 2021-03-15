@@ -356,10 +356,25 @@
         bottom: -6%;
     }
 
+    .header__dot--active.header__dot {
+        width: 15px;
+        height: 15px;   
+    }
+    
+    .header__dot--active.header__dot::after {
+        height: 30px;
+        width: 30px;
+    }
+
     .header__arrow {
        height: 5%;
        width: 94%;
        padding: 0;
+    }
+
+    .header__arrow-text {
+        margin: 0;
+        margin-top: 20px;
     }
 
     .header__images {

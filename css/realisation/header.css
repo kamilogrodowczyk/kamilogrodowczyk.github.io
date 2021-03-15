@@ -30,14 +30,7 @@
 }
 
 .header__title::after {
-    content: 'realizacje' / 'realizacje';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    font-size: clamp(1.953rem, -1.953rem + 3.1248vw, 3.1248rem);
-    background-color: var(--bg-color-white);
-    color: var(--bg-color-black);
-    padding: 10px;
+    content: '' / 'realizacje';
 }
 
 @media screen and (max-width: 768px) {

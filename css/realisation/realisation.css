@@ -23,11 +23,11 @@
     transition: opacity .2s ease-in-out;
 }
 
-.realisation__images > *:hover:not(.realisation__black) {
+/* .realisation__images > *:hover:not(.realisation__black) {
     opacity: .8;
     transition: opacity .2s ease-in-out;
     cursor: pointer;
-}
+} */
 
 .realisation__image,
 .realisation__image--big {
@@ -94,7 +94,7 @@
 
 .realisation__zoom.realisation__zoom--active {
     opacity: 1;
-    z-index: 99;
+    z-index: 999;
     transition: opacity .2s ease-in-out;
 }
 
@@ -135,6 +135,10 @@
     justify-content: center;
     cursor: pointer;
     font-weight: 700;
+}
+
+.realisation__wrapper--cancel::after {
+    content: 'X' / '';
 }
 
 .realisation__wrapper--cancel:hover {

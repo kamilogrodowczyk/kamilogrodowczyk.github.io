@@ -1,36 +1,71 @@
 export default function zoomPhoto() {
-    const zoom = document.querySelector('.realisation__zoom');
-    const zoomedImage = document.querySelector('.realisation__wrapper');;
-    const span = document.querySelector('.realisation__wrapper--cancel');
     const images = document.querySelectorAll('.realisation__image, .realisation__image--big');
 
-
-    function selectImage(e) {  
-        const style = window.getComputedStyle(e.currentTarget); 
-        const backgroundImage = style.getPropertyValue('background-image'); 
-        zoom.classList.add('realisation__zoom--active') 
-        zoomedImage.style.backgroundImage = backgroundImage;
-        zoomedImage.classList.add('realisation__image--active')
-        if(this.classList.contains('realisation__image--big')) {
-            zoomedImage.classList.add('realisation__image--big--active')
-        } else {
-            zoomedImage.classList.remove('realisation__image--big--active')
-        }   
+    function selectImage(e) { 
+        createElements(e.currentTarget)
     }
 
-    function cancelZoom() {
-        zoom.classList.remove('realisation__zoom--active') 
+    function createElements(element) {
+
+        const firstChild = createFirstChild(element);
+        const secondChild = createSecondChild(element)
+        const thirdChild = createThirdChild()
+
+        removeElements(element, thirdChild, firstChild)
+        removeElements(element, firstChild, firstChild)
+
+        element.appendChild(firstChild)
+        firstChild.appendChild(secondChild)
+        secondChild.appendChild(thirdChild)
+    }
+
+    function createFirstChild(element) {
+        const zoom = document.createElement('div');
+        zoom.className = 'realisation__zoom realisation__zoom--active';
+        zoom.setAttribute('aria-label', `${element.getAttribute('aria-label')} - powiększone`)
+
+        return zoom;
+    }
+
+    function createSecondChild(element) {
+
+        const style = window.getComputedStyle(element); 
+        const backgroundImage = style.getPropertyValue('background-image');
+
+        const zoomChild = document.createElement('div');
+        zoomChild.className = 'realisation__wrapper realisation__image--active';
+
+        if(element.classList.contains('realisation__image--big')) {
+            zoomChild.className = 'realisation__wrapper realisation__image--big--active';
+        } 
+
+        zoomChild.style.backgroundImage = backgroundImage;
+        zoomChild.addEventListener('click', e => {
+            e.stopPropagation()
+        })
+
+        return zoomChild;
+    }
+
+    function createThirdChild() {
+        const button = document.createElement('button');
+        button.className = 'realisation__wrapper--cancel';
+        button.setAttribute('aria-label', 'Wyłącz powiększone zdjęcie')
+
+        // button.textContent = 'X'
+
+        return button;
+    }
+
+    function removeElements(mainParent, child, removedElement) {
+        if(child) {
+            child.addEventListener('click', e => {
+                e.stopPropagation()
+                mainParent.removeChild(removedElement)
+            })
+        }
     }
     
     images.forEach(image => image.addEventListener('click', selectImage));
-    zoomedImage.addEventListener('click', e => e.stopPropagation())
-    span.addEventListener('click', cancelZoom)
-    zoom.addEventListener('click', cancelZoom)
-    window.addEventListener('keydown', e => {
-        if(e.key === "Escape") {
-            zoom.classList.remove('realisation__zoom--active') 
-        }
-        console.log(e)
-    })
 }
 
