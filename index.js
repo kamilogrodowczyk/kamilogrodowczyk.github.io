@@ -12,12 +12,12 @@ function init() {
 	carousel();	
 	stickyHeader();
 	observerCounter();
-	mobileScreen();
 	resize();
 	zoomPhoto();
 }
 validationForm();
 observerAnimation();
 hamburgerMenu();
+mobileScreen();
 
 window.addEventListener('load', init);

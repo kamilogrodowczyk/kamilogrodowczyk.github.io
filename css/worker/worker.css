@@ -110,7 +110,6 @@ input[type="file"]::-webkit-file-upload-button {
     border: none;
     display: inline-block;
     border-radius: 5px;
-    /* color: var(--bg-color-black); */
     color: transparent;
     white-space: nowrap;
     cursor: pointer;
@@ -222,14 +221,6 @@ input[type=checkbox]:checked ~ label:after {
     font-size: 1rem;
     text-align: center;
 }
-
-/* input:invalid{
-    border-color: #900;
-  }
-  
-  input:focus:invalid {
-    outline: none;
-  } */
   
   /* This is the style of our error messages */
   .error {

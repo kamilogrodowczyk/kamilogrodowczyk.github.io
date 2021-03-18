@@ -52,8 +52,6 @@ export default function zoomPhoto() {
         button.className = 'realisation__wrapper--cancel';
         button.setAttribute('aria-label', 'Wyłącz powiększone zdjęcie')
 
-        // button.textContent = 'X'
-
         return button;
     }
 
