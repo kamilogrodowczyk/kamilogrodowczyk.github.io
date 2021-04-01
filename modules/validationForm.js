@@ -8,7 +8,7 @@ export default function validationForm() {
         form.setAttribute('novalidate', true)
     }
 
-    function validate() {
+    const validate = () => {
         const elem = this;
         if (elem.validity.valid) {
             elem.nextElementSibling.textContent = "";
@@ -18,7 +18,7 @@ export default function validationForm() {
         }
     }
 
-    function submit(e) {
+    const submit = (e) => {
         inputs.forEach(input => {
             if(!input.validity.valid) {
                 showError(input);
@@ -73,7 +73,7 @@ export default function validationForm() {
                 });
     }
 
-    function showError(elem) {
+    const showError = (elem) => {
         if(elem.validity.valueMissing) {
             elem.nextElementSibling.textContent = "To pole jest żądane";
         } else if(elem.validity.typeMismatch) {
@@ -85,7 +85,7 @@ export default function validationForm() {
         elem.nextElementSibling.className = "error active"
     }
 
-    function handleClick() {
+    const handleClick = () => {
         let flag;
         agreement.classList.toggle('worker__agreement--active');
 

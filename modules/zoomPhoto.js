@@ -1,11 +1,11 @@
 export default function zoomPhoto() {
     const images = document.querySelectorAll('.realisation__image, .realisation__image--big');
 
-    function selectImage(e) { 
+    const selectImage = (e) => { 
         createElements(e.currentTarget)
     }
 
-    function createElements(element) {
+    const createElements = (element) => {
 
         const firstChild = createFirstChild(element);
         const secondChild = createSecondChild(element)
@@ -19,7 +19,7 @@ export default function zoomPhoto() {
         secondChild.appendChild(thirdChild)
     }
 
-    function createFirstChild(element) {
+    const createFirstChild = (element) => {
         const zoom = document.createElement('div');
         zoom.className = 'realisation__zoom realisation__zoom--active';
         zoom.setAttribute('aria-label', `${element.getAttribute('aria-label')} - powiększone`)
@@ -27,7 +27,7 @@ export default function zoomPhoto() {
         return zoom;
     }
 
-    function createSecondChild(element) {
+    const createSecondChild = (element) => {
 
         const style = window.getComputedStyle(element); 
         const backgroundImage = style.getPropertyValue('background-image');
@@ -47,7 +47,7 @@ export default function zoomPhoto() {
         return zoomChild;
     }
 
-    function createThirdChild() {
+    const createThirdChild = () => {
         const button = document.createElement('button');
         button.className = 'realisation__wrapper--cancel';
         button.setAttribute('aria-label', 'Wyłącz powiększone zdjęcie')
@@ -55,7 +55,7 @@ export default function zoomPhoto() {
         return button;
     }
 
-    function removeElements(mainParent, child, removedElement) {
+    const removeElements = (mainParent, child, removedElement) => {
         if(child) {
             child.addEventListener('click', e => {
                 e.stopPropagation()
