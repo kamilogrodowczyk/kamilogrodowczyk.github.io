@@ -1,69 +1,107 @@
 export default function zoomPhoto() {
-    const images = document.querySelectorAll('.realisation__image, .realisation__image--big');
+  const images = document.querySelectorAll(
+    ".realisation__image, .realisation__image--big",
+  );
+  const example = document.querySelector(".emptyElement");
+  const fragment = document.createDocumentFragment();
 
-    const selectImage = (e) => { 
-        createElements(e.currentTarget)
-    }
+  images.forEach((image, index) =>
+    image.addEventListener("click", (e) => {
+      let currentIndex = index;
 
-    const createElements = (element) => {
+      createBlackBackground(fragment);
+      const rightArrow = createRightArrow(fragment);
+      const leftArrow = createLeftArrow(fragment);
 
-        const firstChild = createFirstChild(element);
-        const secondChild = createSecondChild(element)
-        const thirdChild = createThirdChild()
+      createZoomImage(images[currentIndex]);
 
-        removeElements(element, thirdChild, firstChild)
-        removeElements(element, firstChild, firstChild)
+      if (!currentIndex) leftArrow.disabled = true;
+      if (currentIndex >= images.length - 1) rightArrow.disabled = true;
 
-        element.appendChild(firstChild)
-        firstChild.appendChild(secondChild)
-        secondChild.appendChild(thirdChild)
-    }
+      const cancelButton = createCancelButton(fragment);
+      example.appendChild(fragment);
 
-    const createFirstChild = (element) => {
-        const zoom = document.createElement('div');
-        zoom.className = 'realisation__zoom realisation__zoom--active';
-        zoom.setAttribute('aria-label', `${element.getAttribute('aria-label')} - powiększone`)
+      rightArrow.addEventListener("click", () => {
+        currentIndex += 1;
+        createZoomImage(images[currentIndex], images[currentIndex - 1]);
+        leftArrow.disabled = false;
+        if (currentIndex >= images.length - 1) rightArrow.disabled = true;
+      });
 
-        return zoom;
-    }
+      leftArrow.addEventListener("click", () => {
+        currentIndex -= 1;
+        if (!currentIndex) leftArrow.disabled = true;
+        createZoomImage(images[currentIndex], images[currentIndex + 1]);
+        rightArrow.disabled = false;
+      });
 
-    const createSecondChild = (element) => {
-
-        const style = window.getComputedStyle(element); 
-        const backgroundImage = style.getPropertyValue('background-image');
-
-        const zoomChild = document.createElement('div');
-        zoomChild.className = 'realisation__wrapper realisation__image--active';
-
-        if(element.classList.contains('realisation__image--big')) {
-            zoomChild.className = 'realisation__wrapper realisation__image--big--active';
-        } 
-
-        zoomChild.style.backgroundImage = backgroundImage;
-        zoomChild.addEventListener('click', e => {
-            e.stopPropagation()
-        })
-
-        return zoomChild;
-    }
-
-    const createThirdChild = () => {
-        const button = document.createElement('button');
-        button.className = 'realisation__wrapper--cancel';
-        button.setAttribute('aria-label', 'Wyłącz powiększone zdjęcie')
-
-        return button;
-    }
-
-    const removeElements = (mainParent, child, removedElement) => {
-        if(child) {
-            child.addEventListener('click', e => {
-                e.stopPropagation()
-                mainParent.removeChild(removedElement)
-            })
+      cancelButton.addEventListener("click", () => {
+        removeElements(example, images[currentIndex]);
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          removeElements(example, images[currentIndex]);
         }
-    }
-    
-    images.forEach(image => image.addEventListener('click', selectImage));
+      });
+    }),
+  );
 }
 
+const createBlackBackground = (fragmentElement) => {
+  const element = document.createElement("div");
+  element.className = "realisation__zoom realisation__zoom--active";
+  fragmentElement.appendChild(element);
+};
+
+const createZoomImage = (imageToClick, previousImageToClick = null) => {
+  const style = window.getComputedStyle(imageToClick);
+  const backgroundImage = style.getPropertyValue("background-image");
+  const zoomChild = document.createElement("div");
+  if (imageToClick.classList.contains("realisation__image--big")) {
+    zoomChild.className =
+      "realisation__wrapper realisation__image--big--active";
+  } else {
+    zoomChild.className = "realisation__wrapper realisation__image--active";
+  }
+  if (zoomChild.style.backgroundImage) {
+    zoomChild.style.backgroundImage = imageToClick.style.backgroundImage;
+  } else {
+    zoomChild.style.backgroundImage = backgroundImage;
+  }
+  imageToClick.appendChild(zoomChild);
+  previousImageToClick
+    ? previousImageToClick.removeChild(previousImageToClick.children[0])
+    : null;
+};
+
+const createLeftArrow = (fragmentElement) => {
+  const leftArrow = document.createElement("button");
+  leftArrow.textContent = "<";
+  leftArrow.className = "imageLeftArrow";
+  fragmentElement.appendChild(leftArrow);
+
+  return leftArrow;
+};
+
+const createRightArrow = (fragmentElement) => {
+  const rightArrow = document.createElement("button");
+  rightArrow.textContent = ">";
+  rightArrow.className = "imageRightArrow";
+  fragmentElement.appendChild(rightArrow);
+
+  return rightArrow;
+};
+
+const createCancelButton = (fragmentElement) => {
+  const cancelButton = document.createElement("button");
+  cancelButton.textContent = "X";
+  cancelButton.className = "realisation__wrapper--cancel";
+  fragmentElement.appendChild(cancelButton);
+
+  return cancelButton;
+};
+
+const removeElements = (elementHTML, parent) => {
+  elementHTML.innerHTML = "";
+  parent.innerHTML = "";
+};

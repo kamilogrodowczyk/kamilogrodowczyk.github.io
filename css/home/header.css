@@ -248,7 +248,7 @@
     display: grid;
     justify-items: flex-start;
     align-content: flex-end;
-    height: 100%;
+    align-self: flex-end;
     padding: 0 2vw 4vh;
     transform: translateX(-2.5vw);
     opacity: 0;
